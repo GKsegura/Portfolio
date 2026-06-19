@@ -13,12 +13,36 @@ const Projetos = () => {
 
     const sortedProjetos = sortProjetos(projetosData)
 
+    const featuredProjetos = sortedProjetos.filter((projeto) => projeto.featured)
+    const otherProjetos = sortedProjetos.filter((projeto) => !projeto.featured)
+
     return (
         <section ref={sectionRef} className={`${styles.projetos} reveal`} id="projetos">
-            <h2>Projetos</h2>
+            <div className={styles.header}>
+                <span className={styles.subtitle}>Meus principais trabalhos</span>
+                <h2>Projetos</h2>
+                <p>
+                    Alguns projetos que representam minha evolução em front-end, back-end,
+                    APIs, automações e produtos digitais.
+                </p>
+            </div>
+
+            {featuredProjetos.length > 0 && (
+                <div className={styles.featuredGrid}>
+                    {featuredProjetos.map((projeto, index) => (
+                        <ProjetoCard
+                            key={projeto.id}
+                            projeto={projeto}
+                            onVerMais={() => setSelectedProjeto(projeto)}
+                            animationDelay={index * 120}
+                            featured
+                        />
+                    ))}
+                </div>
+            )}
 
             <div className={styles.projetosContainer}>
-                {sortedProjetos.map((projeto, index) => (
+                {otherProjetos.map((projeto, index) => (
                     <ProjetoCard
                         key={projeto.id}
                         projeto={projeto}

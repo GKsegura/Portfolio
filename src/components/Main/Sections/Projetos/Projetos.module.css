@@ -1,34 +1,85 @@
 .projetos {
-    border-radius: var(--radius);
     width: 100%;
     max-width: 1200px;
     text-align: center;
+}
 
-    h2 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-    }
+.header {
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+}
 
+.subtitle {
+    display: inline-flex;
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.header h2 {
+    font-size: 2.3rem;
+    margin-bottom: 0.75rem;
+}
+
+.header p {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.featuredGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.projetosContainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+/* Card sozinho na última linha → centraliza na coluna do meio */
+.projetosContainer > :last-child:nth-child(3n + 1) {
+    grid-column: 2;
+}
+
+@media (max-width: 1050px) {
     .projetosContainer {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 2rem;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    /* Reseta o centra de 3 colunas — aqui são 2 */
+    .projetosContainer > :last-child:nth-child(3n + 1) {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 900px) {
+    .featuredGrid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
     .projetos {
-        h2 {
-            text-align: center;
-        }
+        padding: 0 1rem;
+    }
 
-        .projetosContainer {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            padding: 0 1rem;
-        }
+    .header h2 {
+        font-size: 2rem;
+    }
+
+    .projetosContainer {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .featuredGrid {
+        gap: 1.25rem;
     }
 }

@@ -62,20 +62,26 @@
     border: none;
     cursor: pointer;
     color: var(--color-primary);
-    padding: 4px;
+    padding: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 6px;
+    border-radius: 8px;
     flex-shrink: 0;
-    /* neutraliza o transform global de button */
-    transform: none !important;
-    transition: color 0.2s ease, background 0.2s ease !important;
+    transition:
+        color 0.2s ease,
+        background 0.2s ease,
+        transform 0.35s var(--ease-spring) !important;
 
     &:hover {
         color: var(--color-primary-hover);
-        background: rgba(169, 112, 255, 0.1) !important;
-        transform: none !important;
+        background: rgba(169, 112, 255, 0.12) !important;
+        transform: rotate(90deg) scale(1.1) !important;
+    }
+
+    &:active {
+        transform: rotate(90deg) scale(0.95) !important;
+        transition: transform 0.1s ease-in !important;
     }
 }
 
@@ -103,10 +109,15 @@
     width: 100%;
     border-radius: 10px;
     border: 1px solid var(--color-surface-border);
-    transition: box-shadow 0.3s ease;
+    transition:
+        box-shadow 0.35s ease,
+        transform 0.45s var(--ease-spring),
+        border-color 0.3s ease;
 
     &:hover {
-        box-shadow: 0 0 12px rgba(169, 112, 255, 0.45);
+        box-shadow: 0 0 20px rgba(169, 112, 255, 0.4);
+        transform: scale(1.025);
+        border-color: rgba(169, 112, 255, 0.4);
     }
 }
 
@@ -135,10 +146,13 @@
         font-size: 0.82rem;
         border-radius: var(--radius);
         cursor: default;
-        transition: background 0.2s ease;
+        transition:
+            background 0.25s ease,
+            transform 0.35s var(--ease-spring);
 
         &:hover {
             background: rgba(169, 112, 255, 0.2);
+            transform: translateY(-2px);
         }
 
         img {
@@ -160,33 +174,33 @@
 }
 
 .concluído {
-    background-color: rgba(0, 128, 0, 0.15);
-    color: #008000;
-    border-color: #00800088;
+    background-color: rgba(0, 180, 90, 0.12);
+    color: #40d982;
+    border-color: rgba(64, 217, 130, 0.35);
 }
 
 .emdesenvolvimento {
-    background-color: rgba(255, 165, 0, 0.15);
-    color: #FFA500;
-    border-color: #FFA50088;
+    background-color: rgba(255, 165, 0, 0.12);
+    color: #ffc057;
+    border-color: rgba(255, 192, 87, 0.35);
 }
 
 .pausado {
-    background-color: rgba(220, 20, 60, 0.15);
-    color: #DC143C;
-    border-color: #DC143C88;
+    background-color: rgba(220, 20, 60, 0.12);
+    color: #ff6b8a;
+    border-color: rgba(255, 107, 138, 0.35);
 }
 
 .emusoativo {
-    background-color: rgba(0, 128, 0, 0.15);
-    color: #008000;
-    border-color: #00800088;
+    background-color: rgba(0, 180, 90, 0.12);
+    color: #40d982;
+    border-color: rgba(64, 217, 130, 0.35);
 }
 
 .emevolução {
-    background-color: rgba(100, 100, 255, 0.15);
-    color: #6060cc;
-    border-color: #6060cc88;
+    background-color: rgba(100, 100, 255, 0.12);
+    color: #9da0ff;
+    border-color: rgba(157, 160, 255, 0.35);
 }
 
 /* Coluna direita */
@@ -242,13 +256,24 @@
     font-size: 0.95rem;
     box-shadow: 0 4px 12px rgba(169, 112, 255, 0.35);
     border: 1px solid transparent;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.35s var(--ease-out),
+        transform 0.4s var(--ease-spring),
+        color 0.25s ease;
 
     &:hover {
         background: var(--color-primary-hover);
         border-color: var(--color-primary);
-        box-shadow: 0 5px 16px rgba(179, 136, 255, 0.5);
-        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(179, 136, 255, 0.5);
+        transform: translateY(-3px);
+        color: var(--color-text-inverted);
+    }
+
+    &:active {
+        transform: translateY(1px);
+        transition: transform 0.1s ease-in;
     }
 }
 
