@@ -1,4 +1,4 @@
-import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { useScrollAnimation } from '@hooks/useScrollAnimation'
 import sobreData from '@data/sobre.json'
 import { useState } from 'react'
 import styles from './Sobre.module.css'
@@ -72,7 +72,7 @@ const Sobre = () => {
             </section>
 
             <section ref={techRef} className={`${styles.tecnologias} reveal`} id='tecnologias'>
-                <h1>{sobreData.tecnologias.titulo}</h1>
+                <h2>{sobreData.tecnologias.titulo}</h2>
                 <ul className={styles.tecnologiasContainer}>
                     {sobreData.tecnologias.lista.map(tech => (
                         <li key={tech.nome}>

@@ -1,8 +1,17 @@
 import { useEffect, useState } from 'react'
 import styles from './Header.module.css'
 
+const NAV_LINKS = [
+    { href: '#sobre', label: 'Sobre', id: 'sobre' },
+    { href: '#projetos', label: 'Projetos', id: 'projetos' },
+    { href: '#contato', label: 'Contato', id: 'contato' },
+]
+
+const SECTION_TO_NAV = { sobre: 'sobre', tecnologias: 'sobre', projetos: 'projetos', contato: 'contato' }
+
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)
+    const [activeSection, setActiveSection] = useState('sobre')
 
     useEffect(() => {
         if (!isOpen) return
@@ -19,6 +28,23 @@ export default function Header() {
         }
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
+    }, [])
+
+    useEffect(() => {
+        const sections = document.querySelectorAll('section[id]')
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const navId = SECTION_TO_NAV[entry.target.id]
+                        if (navId) setActiveSection(navId)
+                    }
+                })
+            },
+            { threshold: 0.35 }
+        )
+        sections.forEach(s => observer.observe(s))
+        return () => observer.disconnect()
     }, [])
 
     const handleNavClick = () => setIsOpen(false)
@@ -39,9 +65,16 @@ export default function Header() {
             </button>
 
             <nav className={`${styles.nav} ${isOpen ? styles.navOpen : ''}`}>
-                <a href="#sobre" onClick={handleNavClick}>Sobre</a>
-                <a href="#projetos" onClick={handleNavClick}>Projetos</a>
-                <a href="#contato" onClick={handleNavClick}>Contato</a>
+                {NAV_LINKS.map(({ href, label, id }) => (
+                    <a
+                        key={id}
+                        href={href}
+                        onClick={handleNavClick}
+                        className={activeSection === id ? styles.active : ''}
+                    >
+                        {label}
+                    </a>
+                ))}
             </nav>
         </header>
     )

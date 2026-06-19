@@ -1,4 +1,4 @@
-import { useScrollAnimation } from '@/hooks/useScrollAnimation'
+import { useScrollAnimation } from '@hooks/useScrollAnimation'
 import { FaEnvelope, FaWhatsapp } from 'react-icons/fa'
 import styles from './Contato.module.css'
 
@@ -17,14 +17,14 @@ const Contato = () => {
             </p>
 
             <div className={styles.links}>
-                <a href='mailto:jose.segura.ms@gmail.com' className={styles.cta}>
+                <a href='mailto:jose.segura.ms@gmail.com' className={`${styles.cta} ${styles.ctaEmail}`}>
                     <FaEnvelope className={styles.icon} />
-                    <span className={styles.ctaText}>Enviar e-mail</span>
+                    Enviar e-mail
                 </a>
 
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className={styles.cta}>
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className={`${styles.cta} ${styles.ctaWhatsapp}`}>
                     <FaWhatsapp className={styles.icon} />
-                    <span className={styles.ctaText}>Falar no WhatsApp</span>
+                    Falar no WhatsApp
                 </a>
             </div>
         </section>
