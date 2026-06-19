@@ -3,60 +3,105 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 4rem 2rem;
-    margin: 2em;
+    padding: 4rem 3rem;
     color: var(--color-text);
     text-align: center;
-    border-radius: var(--radius);
+    border-radius: calc(var(--radius) + 6px);
+    width: 100%;
+    max-width: 760px;
+
+    /* orbes internos + branco elevado + borda gradiente */
+    background:
+        radial-gradient(ellipse at 16% 22%, rgba(169, 112, 255, 0.18) 0%, transparent 52%) padding-box,
+        radial-gradient(ellipse at 84% 80%, rgba(86, 207, 207, 0.14) 0%, transparent 52%) padding-box,
+        rgba(255, 255, 255, 0.11) padding-box,
+        linear-gradient(135deg,
+            rgba(169, 112, 255, 0.55) 0%,
+            rgba(255, 255, 255, 0.06) 45%,
+            rgba(86, 207, 207, 0.4) 100%) border-box;
+    border: 1px solid transparent;
+
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px);
+
+    box-shadow:
+        0 0 70px rgba(169, 112, 255, 0.13),
+        0 24px 60px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16);
 
     h1 {
         font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        color: var(--color-primary);
+        margin-bottom: 1rem;
+        color: var(--color-text);
+        letter-spacing: -0.02em;
     }
 
     .description {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         margin-bottom: 2rem;
-        max-width: 800px;
+        max-width: 560px;
+        color: var(--color-text-muted);
+        line-height: 1.7;
     }
 
     .links {
         display: flex;
-        gap: 1.5rem;
+        gap: 1rem;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .cta {
-        color: var(--color-text-inverted);
         text-decoration: none;
         font-weight: 600;
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;
         transition: all var(--transition-normal);
-        background-color: var(--color-primary);
-        padding: 1rem 2rem;
+        padding: 0.9rem 1.75rem;
         border-radius: var(--radius);
+        font-size: 0.95rem;
+    }
+
+    .ctaEmail {
+        background-color: var(--color-primary);
+        color: var(--color-text-inverted);
         border: 1px solid transparent;
-        box-shadow: 0 4px 12px rgba(169, 112, 255, 0.3);
+        box-shadow: 0 4px 14px rgba(169, 112, 255, 0.35);
 
         &:hover {
             background-color: var(--color-primary-hover);
-            border-color: var(--color-primary);
-            box-shadow: 0 6px 20px rgba(169, 112, 255, 0.4);
+            box-shadow: 0 6px 22px rgba(169, 112, 255, 0.5);
             transform: translateY(-3px);
+            color: var(--color-text-inverted);
         }
 
         &:active {
             transform: translateY(-1px);
-            box-shadow: 0 3px 10px rgba(169, 112, 255, 0.3);
+        }
+    }
+
+    .ctaWhatsapp {
+        background-color: transparent;
+        color: var(--color-secondary);
+        border: 1px solid rgba(86, 207, 207, 0.45);
+        box-shadow: 0 4px 14px rgba(86, 207, 207, 0.1);
+
+        &:hover {
+            background-color: rgba(86, 207, 207, 0.1);
+            border-color: var(--color-secondary);
+            box-shadow: 0 6px 22px rgba(86, 207, 207, 0.25);
+            transform: translateY(-3px);
+            color: var(--color-secondary);
         }
 
-        .ctaText {
-            font-weight: 600;
+        &:active {
+            transform: translateY(-1px);
         }
+    }
+
+    .icon {
+        font-size: 1.1rem;
     }
 }
 
@@ -72,25 +117,26 @@
 
     .cta {
         padding: 0.8rem 1.5rem;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
     .contato {
-        padding: 3rem 1rem;
+        padding: 3rem 1.5rem;
     }
 
     .contato h1 {
-        font-size: 1.8rem;
+        font-size: 1.75rem;
     }
 
-    .description {
-        font-size: 0.9rem;
-    }
+    .links {
+        flex-direction: column;
+        width: 100%;
 
-    .cta {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
+        .cta {
+            justify-content: center;
+            width: 100%;
+        }
     }
 }
