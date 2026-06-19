@@ -5,6 +5,8 @@ import { getStackEmoji } from '@utils/project'
 import { FaGithub } from 'react-icons/fa'
 import styles from './ProjetoCard.module.css'
 
+const DEFAULT_IMAGE = '/assets/default-project.svg'
+
 const ProjetoCard = ({ projeto, onVerMais, animationDelay = 0, featured = false }) => {
     const cardRef = useScrollAnimation({ threshold: 0.08 })
 
@@ -41,9 +43,10 @@ const ProjetoCard = ({ projeto, onVerMais, animationDelay = 0, featured = false 
 
             <div className={styles.imageWrapper}>
                 <img
-                    src={projeto.image}
+                    src={projeto.image || DEFAULT_IMAGE}
                     alt={projeto.title}
                     className={styles.projetoImage}
+                    onError={(e) => { e.target.src = DEFAULT_IMAGE }}
                 />
             </div>
 
