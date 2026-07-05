@@ -3,11 +3,20 @@ import styles from './Header.module.css'
 
 const NAV_LINKS = [
     { href: '#sobre', label: 'Sobre', id: 'sobre' },
+    { href: '#experiencia', label: 'Experiência', id: 'experiencia' },
+    { href: '#formacao', label: 'Formação', id: 'formacao' },
     { href: '#projetos', label: 'Projetos', id: 'projetos' },
     { href: '#contato', label: 'Contato', id: 'contato' },
 ]
 
-const SECTION_TO_NAV = { sobre: 'sobre', tecnologias: 'sobre', projetos: 'projetos', contato: 'contato' }
+const SECTION_TO_NAV = {
+    sobre: 'sobre',
+    tecnologias: 'sobre',
+    experiencia: 'experiencia',
+    formacao: 'formacao',
+    projetos: 'projetos',
+    contato: 'contato',
+}
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false)

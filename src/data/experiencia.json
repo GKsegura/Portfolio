@@ -1,0 +1,26 @@
+{
+    "titulo": "Experiência",
+    "itens": [
+        {
+            "cargo": "Analista de Suporte (Júnior)",
+            "empresa": "Nexum Tecnologia",
+            "local": "Bauru, SP",
+            "inicio": "2026-01",
+            "fim": null
+        },
+        {
+            "cargo": "Analista de Suporte (Trainee)",
+            "empresa": "Nexum Tecnologia",
+            "local": "Bauru, SP",
+            "inicio": "2025-07",
+            "fim": "2026-01"
+        },
+        {
+            "cargo": "Desenvolvedor BPM (Estágio)",
+            "empresa": "Nexum Tecnologia",
+            "local": "Bauru, SP",
+            "inicio": "2024-03",
+            "fim": "2024-08"
+        }
+    ]
+}

@@ -3,43 +3,30 @@
         "nome": "José Segura",
         "titulo": "Desenvolvedor Full-Stack",
         "subtitulo": "Especialista em Java, React e automações - construo sistemas que economizam tempo e escalam.",
+        "fichaTecnica": [
+            {
+                "label": "Cargo",
+                "valor": "Analista de Suporte - Nexum Tecnologia"
+            },
+            {
+                "label": "Foco",
+                "valor": "Desenvolvimento Back-end - automações que aumentam produtividade"
+            }
+        ],
         "paragrafos": [
             {
+                "id": 1,
+                "texto": "Já entreguei e-commerces, plataformas de investimentos e dashboards com integração de APIs e dados em tempo real - sempre buscando automatizar processos e entregar performance real. Confira tudo no meu <a href=\"https://github.com/GKsegura\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>."
+            },
+            {
                 "id": 2,
-                "texto": "Atuo como <strong>Analista de Suporte</strong> na <strong>Nexum Tecnologia</strong>, desenvolvendo automações com BPM, robôs e integrações Java — entregando performance real aos clientes.",
-                "visivel": true
-            },
-            {
-                "id": 3,
-                "texto": "Já entreguei e-commerces, plataformas de investimentos e dashboards com integração de APIs e dados em tempo real. Confira tudo no meu <a href=\"https://github.com/GKsegura\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>.",
-                "visivel": true
-            },
-            {
-                "id": 4,
-                "texto": "Estou aprofundando meus conhecimentos em <strong>Java e MySQL</strong>, focando no back-end para criar aplicações robustas, escaláveis e performáticas.",
-                "visivel": false
-            },
-            {
-                "id": 5,
-                "texto": "Sou movido por resolver problemas reais e transformar desafios em soluções práticas. Para mim, tecnologia vai além de código — é a ponte entre ideias e resultados concretos.",
-                "visivel": false
-            },
-            {
-                "id": 6,
-                "texto": "Tenho facilidade em trabalhar em equipe, encarar desafios complexos e aplicar criatividade em cada projeto. Prezo por código limpo, boas práticas e ver ideias saindo do papel.",
-                "visivel": false
+                "texto": "Sou movido por resolver problemas reais: gosto de encarar desafios complexos, aplicar criatividade e transformar ideias em soluções práticas, sempre com código limpo e boas práticas."
             }
         ],
         "cta": {
-            "texto": "Se você tem um projeto, uma ideia ou quer turbinar seu sistema, ",
-            "destaque": "",
-            "textoContinuacao": "",
-            "linkTexto": "me chama e vamos construir algo incrível juntos!",
             "linkHref": "#contato"
         },
         "curriculo": {
-            "texto": "Você também pode baixar o ",
-            "linkTexto": "meu currículo",
             "linkHref": "/CVJoseSegura.pdf"
         }
     },
@@ -63,9 +50,5 @@
                 "icone": "mysql/mysql-original.svg"
             }
         ]
-    },
-    "botoes": {
-        "verMais": "Ler mais ▼",
-        "verMenos": "Ler menos ▲"
     }
 }

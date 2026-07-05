@@ -42,4 +42,18 @@ const getStackEmoji = (stack) => {
     }
 };
 
-export { getStackEmoji, sortProjetos };
+const slugify = (text) => {
+    const withoutAccents = Array.from(text.normalize('NFD'))
+        .filter((char) => {
+            const code = char.codePointAt(0);
+            return code < 0x0300 || code > 0x036f; // faixa das marcas diacríticas combinantes
+        })
+        .join('');
+
+    return withoutAccents
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+};
+
+export { getStackEmoji, slugify, sortProjetos };

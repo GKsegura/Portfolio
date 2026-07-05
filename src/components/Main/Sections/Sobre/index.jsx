@@ -1,25 +1,30 @@
-import { useScrollAnimation } from '@hooks/useScrollAnimation'
 import sobreData from '@data/sobre.json'
-import { useState } from 'react'
+import { useScrollAnimation } from '@hooks/useScrollAnimation'
 import styles from './Sobre.module.css'
 
 const urlTechnologies = 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/'
 
 const Sobre = () => {
-    const [showMore, setShowMore] = useState(false)
-
     const introRef = useScrollAnimation({ threshold: 0.05 })
     const techRef = useScrollAnimation({ threshold: 0.05 })
 
-    const toggleShowMore = () => setShowMore(!showMore)
+    const fichaTecnica = [
+        ...sobreData.intro.fichaTecnica,
+        { label: 'Stack', valor: sobreData.tecnologias.lista.map(tech => tech.nome).join(' · ') },
+    ]
+
+    const promptLabel = 'visitante@portfolio:~$'
+    const terminalLines = [
+        { type: 'cmd', text: 'whoami' },
+        { type: 'out', text: `${sobreData.intro.nome} - ${sobreData.intro.titulo}` },
+        { type: 'cmd', text: 'cat stack.txt' },
+        { type: 'out', text: sobreData.tecnologias.lista.map(tech => tech.nome).join(' · ') },
+    ]
 
     return (
         <>
             <section ref={introRef} className={`${styles.intro} reveal`} id="sobre">
                 <div className={styles.introContainer}>
-                    <div className={styles.imgDev}>
-                        <img src="https://github.com/GKsegura.png" alt="Foto de perfil do José Segura" />
-                    </div>
                     <div className={styles.textContent}>
                         <h1>
                             Olá, eu sou o <span className={styles.highlight}>{sobreData.intro.nome}</span>
@@ -29,50 +34,66 @@ const Sobre = () => {
                             <p className={styles.subtitulo}>{sobreData.intro.subtitulo}</p>
                         )}
 
+                        <ul className={styles.factList}>
+                            {fichaTecnica.map(item => (
+                                <li key={item.label}>
+                                    <span className={styles.factLabel}>{item.label}</span>
+                                    <span className={styles.factValue}>{item.valor}</span>
+                                </li>
+                            ))}
+                        </ul>
+
                         <div className={styles.description}>
-                            {sobreData.intro.paragrafos
-                                .filter(p => p.visivel || showMore)
-                                .map(paragrafo => (
-                                    <p key={paragrafo.id} dangerouslySetInnerHTML={{ __html: paragrafo.texto }} />
-                                ))}
-
-                            <p>
-                                {sobreData.intro.cta.texto}
-                                {sobreData.intro.cta.destaque && (
-                                    <strong>{sobreData.intro.cta.destaque}</strong>
-                                )}
-                                {sobreData.intro.cta.textoContinuacao}
-                                <span className={styles.cta}>
-                                    <a href={sobreData.intro.cta.linkHref}>
-                                        {sobreData.intro.cta.linkTexto}
-                                    </a>
-                                </span>
-                            </p>
-
-                            <p>
-                                {sobreData.intro.curriculo.texto}
-                                <span className={styles.cta}>
-                                    <a href={sobreData.intro.curriculo.linkHref} download>
-                                        {sobreData.intro.curriculo.linkTexto}
-                                    </a>
-                                </span>
-                                !
-                            </p>
+                            {sobreData.intro.paragrafos.map(paragrafo => (
+                                <p key={paragrafo.id} dangerouslySetInnerHTML={{ __html: paragrafo.texto }} />
+                            ))}
                         </div>
 
-                        <button
-                            className={styles.toggleButton}
-                            onClick={toggleShowMore}
-                            aria-expanded={showMore}
-                        >
-                            {showMore ? sobreData.botoes.verMenos : sobreData.botoes.verMais}
-                        </button>
+                        <div className={styles.actions}>
+                            <a href={sobreData.intro.cta.linkHref} className={styles.actionPrimary}>
+                                Vamos conversar →
+                            </a>
+                            <a href={sobreData.intro.curriculo.linkHref} download className={styles.actionSecondary}>
+                                Baixar currículo ↓
+                            </a>
+                        </div>
+                    </div>
+
+                    <div className={styles.media}>
+                        <div className={styles.imgDev}>
+                            <img src="https://github.com/GKsegura.png" alt="Foto de perfil do José Segura" />
+                            <span className={styles.photoTint} aria-hidden="true" />
+                            <span className={styles.photoScanlines} aria-hidden="true" />
+                        </div>
+
+                        <div className={styles.terminal} aria-hidden="true">
+                            <div className={styles.terminalBar}>
+                                <span className={styles.terminalDots}>
+                                    <span className={styles.dotRed} />
+                                    <span className={styles.dotYellow} />
+                                    <span className={styles.dotGreen} />
+                                </span>
+                                <span className={styles.terminalTitle}>~/portfolio — bash</span>
+                                <span className={styles.statusBadge}>
+                                    <span className={styles.statusDot} />
+                                    Status: online
+                                </span>
+                            </div>
+                            <div className={styles.terminalBody}>
+                                {terminalLines.map((line, i) => (
+                                    line.type === 'cmd'
+                                        ? <p key={i}><span className={styles.prompt}>{promptLabel}</span> {line.text}</p>
+                                        : <p key={i} className={styles.terminalOutput}>{'>'} {line.text}</p>
+                                ))}
+                                <p><span className={styles.prompt}>{promptLabel}</span> <span className={styles.cursor} /></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section ref={techRef} className={`${styles.tecnologias} reveal`} id='tecnologias'>
-                <h2>{sobreData.tecnologias.titulo}</h2>
+                <h2><span className={styles.index}>01 //</span> {sobreData.tecnologias.titulo}</h2>
                 <ul className={styles.tecnologiasContainer}>
                     {sobreData.tecnologias.lista.map(tech => (
                         <li key={tech.nome}>

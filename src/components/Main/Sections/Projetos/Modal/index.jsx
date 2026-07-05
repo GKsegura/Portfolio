@@ -1,11 +1,11 @@
 import { formatPeriod } from '@utils/date'
-import { getStackEmoji } from '@utils/project'
+import { getStackEmoji, slugify } from '@utils/project'
 import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import { FaGithub, FaTimes } from 'react-icons/fa'
 import styles from './Modal.module.css'
 
-const Modal = ({ projeto, onClose, languages }) => {
+const Modal = ({ projeto, onClose }) => {
 
     const DEFAULT_IMAGE = '/assets/default-project.svg';
 
@@ -24,9 +24,11 @@ const Modal = ({ projeto, onClose, languages }) => {
         <div className={styles.overlay} onClick={onClose}>
             <div className={styles.modal} onClick={e => e.stopPropagation()}>
 
-                {/* Cabeçalho: título centralizado + botão fechar */}
                 <div className={styles.header}>
-                    <h3>{projeto.title}</h3>
+                    <div>
+                        <span className={styles.endpoint}>GET /projetos/{slugify(projeto.title)}</span>
+                        <h3>{projeto.title}</h3>
+                    </div>
                     <button
                         className={styles.closeButton}
                         onClick={onClose}
@@ -46,36 +48,25 @@ const Modal = ({ projeto, onClose, languages }) => {
                             onError={(e) => { e.target.src = DEFAULT_IMAGE; }}
                         />
 
-                        {projeto.period && (
-                            <small className={styles.period}>
-                                {formatPeriod(projeto.period, projeto.status)}
-                            </small>
-                        )}
+                        <div className={styles.metaRow}>
+                            {projeto.period && (
+                                <small className={styles.period}>
+                                    {formatPeriod(projeto.period, projeto.status)}
+                                </small>
+                            )}
+
+                            {projeto.status && (
+                                <span className={`${styles.status} ${styles[projeto.status.toLowerCase().replace(/\s/g, '')]}`}>
+                                    {projeto.status}
+                                </span>
+                            )}
+                        </div>
 
                         <ul className={styles.languages}>
-                            {projeto.languages.map((tec, index) => {
-                                const key = tec.toLowerCase().replace(/\s+/g, '')
-                                const iconUrl = languages[key]
-                                return (
-                                    <li key={index}>
-                                        {iconUrl && (
-                                            <img
-                                                src={iconUrl}
-                                                alt={tec}
-                                                onError={(e) => (e.target.style.display = 'none')}
-                                            />
-                                        )}
-                                        {tec}
-                                    </li>
-                                )
-                            })}
+                            {projeto.languages.map((tec, index) => (
+                                <li key={index}>{tec}</li>
+                            ))}
                         </ul>
-
-                        {projeto.status && (
-                            <span className={`${styles.status} ${styles[projeto.status.toLowerCase().replace(/\s/g, '')]}`}>
-                                {projeto.status}
-                            </span>
-                        )}
                     </div>
 
                     <div className={styles.right}>
@@ -86,11 +77,9 @@ const Modal = ({ projeto, onClose, languages }) => {
                         </p>
 
                         {projeto.stack && (
-                            <div className={styles.stackContainer}>
-                                <span className={styles.stack}>
-                                    <strong>{getStackEmoji(projeto.stack)} Stack:</strong> {projeto.stack}
-                                </span>
-                            </div>
+                            <span className={styles.stack}>
+                                <strong>{getStackEmoji(projeto.stack)} Stack:</strong> {projeto.stack}
+                            </span>
                         )}
 
                         <div className={styles.linkContainer}>

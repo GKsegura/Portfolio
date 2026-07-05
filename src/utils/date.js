@@ -8,4 +8,20 @@ const formatPeriod = (period, status) => {
     return `Em andamento desde ${period.start}`;
 };
 
-export { formatPeriod };
+const MESES = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+
+const formatMonthYear = (value) => {
+    if (!value) return null;
+
+    const [year, month] = value.split('-');
+    return `${MESES[Number(month) - 1]} ${year}`;
+};
+
+const formatMonthRange = (inicio, fim) => {
+    const inicioLabel = formatMonthYear(inicio);
+    if (!inicioLabel) return '';
+
+    return `${inicioLabel} - ${fim ? formatMonthYear(fim) : 'Atual'}`;
+};
+
+export { formatMonthRange, formatPeriod };

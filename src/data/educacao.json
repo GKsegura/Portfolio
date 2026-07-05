@@ -1,0 +1,19 @@
+{
+    "titulo": "Formação",
+    "itens": [
+        {
+            "curso": "Técnico Integrado em Informática",
+            "instituicao": "Colégio Técnico Industrial \"Prof. Isaac Portal Roldán\" - UNESP",
+            "inicio": "2021-01",
+            "fim": "2023-12",
+            "status": "Concluído"
+        },
+        {
+            "curso": "Java Completo: Programação Orientada a Objetos + Projetos",
+            "instituicao": "Udemy - Nélio Alves",
+            "inicio": null,
+            "fim": null,
+            "status": "Em andamento · 88%"
+        }
+    ]
+}

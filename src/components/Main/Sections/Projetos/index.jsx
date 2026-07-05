@@ -1,4 +1,3 @@
-import languages from '@data/languages.json'
 import projetosData from '@data/projetos.json'
 import { useScrollAnimation } from '@hooks/useScrollAnimation'
 import { sortProjetos } from '@utils/project'
@@ -13,41 +12,25 @@ const Projetos = () => {
 
     const sortedProjetos = sortProjetos(projetosData)
 
-    const featuredProjetos = sortedProjetos.filter((projeto) => projeto.featured)
-    const otherProjetos = sortedProjetos.filter((projeto) => !projeto.featured)
-
     return (
         <section ref={sectionRef} className={`${styles.projetos} reveal`} id="projetos">
             <div className={styles.header}>
-                <span className={styles.subtitle}>Meus principais trabalhos</span>
-                <h2>Projetos</h2>
+                <h2><span className={styles.index}>04 //</span> Projetos</h2>
                 <p>
                     Alguns projetos que representam minha evolução em front-end, back-end,
                     APIs, automações e produtos digitais.
                 </p>
             </div>
 
-            {featuredProjetos.length > 0 && (
-                <div className={styles.featuredGrid}>
-                    {featuredProjetos.map((projeto, index) => (
-                        <ProjetoCard
-                            key={projeto.id}
-                            projeto={projeto}
-                            onVerMais={() => setSelectedProjeto(projeto)}
-                            animationDelay={index * 120}
-                            featured
-                        />
-                    ))}
-                </div>
-            )}
-
-            <div className={styles.projetosContainer}>
-                {otherProjetos.map((projeto, index) => (
+            <div className={styles.projetosList}>
+                {sortedProjetos.map((projeto, index) => (
                     <ProjetoCard
                         key={projeto.id}
                         projeto={projeto}
+                        numero={index + 1}
                         onVerMais={() => setSelectedProjeto(projeto)}
-                        animationDelay={index * 120}
+                        animationDelay={index * 80}
+                        featured={projeto.featured}
                     />
                 ))}
             </div>
@@ -56,7 +39,6 @@ const Projetos = () => {
                 <Modal
                     projeto={selectedProjeto}
                     onClose={() => setSelectedProjeto(null)}
-                    languages={languages}
                 />
             )}
         </section>

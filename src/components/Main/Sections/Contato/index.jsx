@@ -11,7 +11,7 @@ const Contato = () => {
 
     return (
         <section ref={sectionRef} className={`${styles.contato} reveal`} id='contato'>
-            <h1>Entre em contato</h1>
+            <h1><span className={styles.index}>05 //</span> Entre em contato</h1>
             <p className={styles.description}>
                 Se você tem uma ideia ou precisa de ajuda com um projeto, entre em contato comigo! Estou sempre aberto a novas oportunidades e desafios.
             </p>

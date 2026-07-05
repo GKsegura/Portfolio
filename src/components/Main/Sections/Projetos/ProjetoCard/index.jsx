@@ -1,13 +1,12 @@
-import languages from '@data/languages.json'
 import { useScrollAnimation } from '@hooks/useScrollAnimation'
 import { formatPeriod } from '@utils/date'
-import { getStackEmoji } from '@utils/project'
+import { getStackEmoji, slugify } from '@utils/project'
 import { FaGithub } from 'react-icons/fa'
 import styles from './ProjetoCard.module.css'
 
 const DEFAULT_IMAGE = '/assets/default-project.svg'
 
-const ProjetoCard = ({ projeto, onVerMais, animationDelay = 0, featured = false }) => {
+const ProjetoCard = ({ projeto, numero, onVerMais, animationDelay = 0, featured = false }) => {
     const cardRef = useScrollAnimation({ threshold: 0.08 })
 
     const statusClass = projeto.status
@@ -27,21 +26,13 @@ const ProjetoCard = ({ projeto, onVerMais, animationDelay = 0, featured = false 
             }}
             aria-label={`Ver detalhes do projeto ${projeto.title}`}
         >
-            {featured && (
-                <span className={styles.featuredLabel}>Projeto em destaque</span>
+            {numero && (
+                <span className={styles.ghostNumber} aria-hidden="true">
+                    {String(numero).padStart(2, '0')}
+                </span>
             )}
 
-            <div className={styles.top}>
-                <h3>{projeto.title}</h3>
-
-                {projeto.status && (
-                    <span className={`${styles.status} ${styles[statusClass]}`}>
-                        {projeto.status}
-                    </span>
-                )}
-            </div>
-
-            <div className={styles.imageWrapper}>
+            <div className={styles.thumb}>
                 <img
                     src={projeto.image || DEFAULT_IMAGE}
                     alt={projeto.title}
@@ -50,7 +41,24 @@ const ProjetoCard = ({ projeto, onVerMais, animationDelay = 0, featured = false 
                 />
             </div>
 
-            <div className={styles.contentSection}>
+            <div className={styles.body}>
+                <div className={styles.metaRow}>
+                    {featured && (
+                        <span className={styles.featuredLabel}>Projeto em destaque</span>
+                    )}
+                    <span className={styles.endpoint}>GET /projetos/{slugify(projeto.title)}</span>
+                </div>
+
+                <div className={styles.top}>
+                    <h3>{projeto.title}</h3>
+
+                    {projeto.status && (
+                        <span className={`${styles.status} ${styles[statusClass]}`}>
+                            {projeto.status}
+                        </span>
+                    )}
+                </div>
+
                 {projeto.period && (
                     <small className={styles.year}>
                         {formatPeriod(projeto.period, projeto.status)}
@@ -64,23 +72,9 @@ const ProjetoCard = ({ projeto, onVerMais, animationDelay = 0, featured = false 
                 )}
 
                 <ul className={styles.languages}>
-                    {projeto.languages.map((tec, index) => {
-                        const normalizedKey = tec.toLowerCase().replace(/\s+/g, '')
-                        const iconUrl = languages[normalizedKey]
-
-                        return (
-                            <li key={index}>
-                                {iconUrl && (
-                                    <img
-                                        src={iconUrl}
-                                        alt={tec}
-                                        onError={(e) => (e.target.style.display = 'none')}
-                                    />
-                                )}
-                                {tec}
-                            </li>
-                        )
-                    })}
+                    {projeto.languages.map((tec, index) => (
+                        <li key={index}>{tec}</li>
+                    ))}
                 </ul>
 
                 {projeto.stack && (

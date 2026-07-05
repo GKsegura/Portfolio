@@ -1,50 +1,62 @@
 .header {
     position: fixed;
-    top: 2vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(1200px, 100%);
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
     background: var(--color-surface);
-    border: 1px solid var(--color-surface-border);
-    border-radius: var(--radius);
+    border: none;
+    border-bottom: 1px solid var(--color-surface-border);
+    border-radius: 0;
     backdrop-filter: blur(var(--blur));
     -webkit-backdrop-filter: blur(var(--blur));
-    box-shadow: var(--shadow);
+    box-shadow: none;
     padding-block: 1rem;
     padding-inline: clamp(1rem, 5vw, 2rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: var(--color-text);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    transition: border-color 0.3s ease;
     z-index: 1000;
 
     &:hover {
-        border-color: rgba(138, 43, 226, 0.5);
-        box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.1);
+        border-color: rgba(169, 112, 255, 0.5);
     }
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--color-primary);
+    position: relative;
+    z-index: 2;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--color-text);
+    text-shadow: 0 0 8px rgba(169, 112, 255, 0.75), 0 0 22px rgba(169, 112, 255, 0.45);
     flex-shrink: 0;
 }
 
 .ponto {
     color: var(--color-secondary);
+    text-shadow: 0 0 10px rgba(86, 207, 207, 0.85);
 }
 
 .nav {
+    position: relative;
+    z-index: 2;
     display: flex;
     gap: 1.5rem;
 
     a {
+        font-family: 'IBM Plex Mono', monospace;
+        text-transform: uppercase;
+        font-size: 0.78rem;
+        letter-spacing: 0.07em;
         color: var(--color-text-muted);
         text-decoration: none;
         font-weight: 500;
-        transition: color 0.3s ease;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
         position: relative;
 
         &::after {
@@ -55,6 +67,7 @@
             width: 100%;
             height: 2px;
             background-color: var(--color-primary);
+            box-shadow: 0 0 8px rgba(169, 112, 255, 0.7);
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.3s ease;
@@ -68,6 +81,7 @@
 
         &:hover {
             color: var(--color-primary);
+            text-shadow: 0 0 8px rgba(169, 112, 255, 0.5);
         }
 
         &:hover::after {
@@ -80,6 +94,7 @@
 
         &.active {
             color: var(--color-primary);
+            text-shadow: 0 0 8px rgba(169, 112, 255, 0.5);
 
             &::after {
                 transform: scaleX(1);
@@ -102,6 +117,7 @@
     border-radius: 4px;
     cursor: pointer;
     flex-shrink: 0;
+    position: relative;
     z-index: 1001;
 
     span {
@@ -109,6 +125,7 @@
         width: 22px;
         height: 2px;
         background-color: var(--color-primary);
+        box-shadow: 0 0 6px rgba(169, 112, 255, 0.5);
         border-radius: 2px;
         transition: transform 0.3s ease, opacity 0.3s ease;
         transform-origin: center;
@@ -146,17 +163,8 @@
 /* ── Mobile ── */
 @media (max-width: 768px) {
     .header {
-        flex-direction: row;
         flex-wrap: wrap;
-        align-items: center;
         padding: 1rem 1.5rem;
-        border-radius: 0;
-        border: none;
-        border-bottom: 1px solid var(--color-surface-border);
-        left: 0;
-        transform: none;
-        top: 0;
-        width: 100%;
     }
 
     .hamburger {
