@@ -8,7 +8,7 @@ const Formacao = () => {
 
     return (
         <section ref={sectionRef} className={`${styles.formacao} reveal`} id="formacao">
-            <h2><span className={styles.index}>03 //</span> {educacaoData.titulo}</h2>
+            <h2>{educacaoData.titulo}</h2>
 
             <ul className={styles.timeline}>
                 {educacaoData.itens.map((item, i) => (

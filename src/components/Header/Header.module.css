@@ -28,18 +28,16 @@
 .logo {
     position: relative;
     z-index: 2;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 0.03em;
     color: var(--color-text);
-    text-shadow: 0 0 8px rgba(169, 112, 255, 0.75), 0 0 22px rgba(169, 112, 255, 0.45);
     flex-shrink: 0;
 }
 
 .ponto {
     color: var(--color-secondary);
-    text-shadow: 0 0 10px rgba(86, 207, 207, 0.85);
 }
 
 .nav {
@@ -49,14 +47,11 @@
     gap: 1.5rem;
 
     a {
-        font-family: 'IBM Plex Mono', monospace;
-        text-transform: uppercase;
-        font-size: 0.78rem;
-        letter-spacing: 0.07em;
+        font-size: 0.92rem;
         color: var(--color-text-muted);
         text-decoration: none;
-        font-weight: 500;
-        transition: color 0.3s ease, text-shadow 0.3s ease;
+        font-weight: 600;
+        transition: color 0.3s ease;
         position: relative;
 
         &::after {
@@ -67,7 +62,6 @@
             width: 100%;
             height: 2px;
             background-color: var(--color-primary);
-            box-shadow: 0 0 8px rgba(169, 112, 255, 0.7);
             transform: scaleX(0);
             transform-origin: left;
             transition: transform 0.3s ease;
@@ -81,7 +75,6 @@
 
         &:hover {
             color: var(--color-primary);
-            text-shadow: 0 0 8px rgba(169, 112, 255, 0.5);
         }
 
         &:hover::after {
@@ -94,7 +87,6 @@
 
         &.active {
             color: var(--color-primary);
-            text-shadow: 0 0 8px rgba(169, 112, 255, 0.5);
 
             &::after {
                 transform: scaleX(1);
@@ -125,7 +117,6 @@
         width: 22px;
         height: 2px;
         background-color: var(--color-primary);
-        box-shadow: 0 0 6px rgba(169, 112, 255, 0.5);
         border-radius: 2px;
         transition: transform 0.3s ease, opacity 0.3s ease;
         transform-origin: center;

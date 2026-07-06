@@ -15,7 +15,7 @@ const Projetos = () => {
     return (
         <section ref={sectionRef} className={`${styles.projetos} reveal`} id="projetos">
             <div className={styles.header}>
-                <h2><span className={styles.index}>04 //</span> Projetos</h2>
+                <h2>Projetos</h2>
                 <p>
                     Alguns projetos que representam minha evolução em front-end, back-end,
                     APIs, automações e produtos digitais.
@@ -27,7 +27,6 @@ const Projetos = () => {
                     <ProjetoCard
                         key={projeto.id}
                         projeto={projeto}
-                        numero={index + 1}
                         onVerMais={() => setSelectedProjeto(projeto)}
                         animationDelay={index * 80}
                         featured={projeto.featured}

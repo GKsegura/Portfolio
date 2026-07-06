@@ -16,9 +16,9 @@ const Sobre = () => {
     const promptLabel = 'visitante@portfolio:~$'
     const terminalLines = [
         { type: 'cmd', text: 'whoami' },
-        { type: 'out', text: `${sobreData.intro.nome} - ${sobreData.intro.titulo}` },
-        { type: 'cmd', text: 'cat stack.txt' },
-        { type: 'out', text: sobreData.tecnologias.lista.map(tech => tech.nome).join(' · ') },
+        { type: 'out', text: `${sobreData.intro.nome}, dev back-end` },
+        { type: 'cmd', text: 'cat foco.txt' },
+        { type: 'out', text: 'APIs REST, automação de processos e integração de dados' },
     ]
 
     return (
@@ -51,10 +51,10 @@ const Sobre = () => {
 
                         <div className={styles.actions}>
                             <a href={sobreData.intro.cta.linkHref} className={styles.actionPrimary}>
-                                Vamos conversar →
+                                Vamos conversar
                             </a>
                             <a href={sobreData.intro.curriculo.linkHref} download className={styles.actionSecondary}>
-                                Baixar currículo ↓
+                                Baixar currículo
                             </a>
                         </div>
                     </div>
@@ -62,8 +62,6 @@ const Sobre = () => {
                     <div className={styles.media}>
                         <div className={styles.imgDev}>
                             <img src="https://github.com/GKsegura.png" alt="Foto de perfil do José Segura" />
-                            <span className={styles.photoTint} aria-hidden="true" />
-                            <span className={styles.photoScanlines} aria-hidden="true" />
                         </div>
 
                         <div className={styles.terminal} aria-hidden="true">
@@ -74,10 +72,6 @@ const Sobre = () => {
                                     <span className={styles.dotGreen} />
                                 </span>
                                 <span className={styles.terminalTitle}>~/portfolio — bash</span>
-                                <span className={styles.statusBadge}>
-                                    <span className={styles.statusDot} />
-                                    Status: online
-                                </span>
                             </div>
                             <div className={styles.terminalBody}>
                                 {terminalLines.map((line, i) => (
@@ -93,7 +87,7 @@ const Sobre = () => {
             </section>
 
             <section ref={techRef} className={`${styles.tecnologias} reveal`} id='tecnologias'>
-                <h2><span className={styles.index}>01 //</span> {sobreData.tecnologias.titulo}</h2>
+                <h2>{sobreData.tecnologias.titulo}</h2>
                 <ul className={styles.tecnologiasContainer}>
                     {sobreData.tecnologias.lista.map(tech => (
                         <li key={tech.nome}>

@@ -1,17 +1,19 @@
 import { useScrollAnimation } from '@hooks/useScrollAnimation'
 import { formatPeriod } from '@utils/date'
-import { getStackEmoji, slugify } from '@utils/project'
+import { getStackIcon } from '@utils/project'
 import { FaGithub } from 'react-icons/fa'
 import styles from './ProjetoCard.module.css'
 
 const DEFAULT_IMAGE = '/assets/default-project.svg'
 
-const ProjetoCard = ({ projeto, numero, onVerMais, animationDelay = 0, featured = false }) => {
+const ProjetoCard = ({ projeto, onVerMais, animationDelay = 0, featured = false }) => {
     const cardRef = useScrollAnimation({ threshold: 0.08 })
 
     const statusClass = projeto.status
         ? projeto.status.toLowerCase().replace(/\s/g, '')
         : ''
+
+    const StackIcon = projeto.stack ? getStackIcon(projeto.stack) : null
 
     return (
         <article
@@ -26,12 +28,6 @@ const ProjetoCard = ({ projeto, numero, onVerMais, animationDelay = 0, featured 
             }}
             aria-label={`Ver detalhes do projeto ${projeto.title}`}
         >
-            {numero && (
-                <span className={styles.ghostNumber} aria-hidden="true">
-                    {String(numero).padStart(2, '0')}
-                </span>
-            )}
-
             <div className={styles.thumb}>
                 <img
                     src={projeto.image || DEFAULT_IMAGE}
@@ -42,12 +38,11 @@ const ProjetoCard = ({ projeto, numero, onVerMais, animationDelay = 0, featured 
             </div>
 
             <div className={styles.body}>
-                <div className={styles.metaRow}>
-                    {featured && (
+                {featured && (
+                    <div className={styles.metaRow}>
                         <span className={styles.featuredLabel}>Projeto em destaque</span>
-                    )}
-                    <span className={styles.endpoint}>GET /projetos/{slugify(projeto.title)}</span>
-                </div>
+                    </div>
+                )}
 
                 <div className={styles.top}>
                     <h3>{projeto.title}</h3>
@@ -79,7 +74,8 @@ const ProjetoCard = ({ projeto, numero, onVerMais, animationDelay = 0, featured 
 
                 {projeto.stack && (
                     <span className={styles.stack}>
-                        <strong>{getStackEmoji(projeto.stack)} Stack:</strong> {projeto.stack}
+                        <StackIcon size={12} />
+                        <strong>Stack:</strong> {projeto.stack}
                     </span>
                 )}
 

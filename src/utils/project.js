@@ -1,3 +1,5 @@
+import { FaBoxOpen, FaGlobe, FaLaptopCode, FaServer } from 'react-icons/fa'
+
 const statusPriority = {
     'Em uso ativo': 1,
     'Em desenvolvimento': 2,
@@ -33,27 +35,13 @@ const sortProjetos = (projetos) => {
     });
 };
 
-const getStackEmoji = (stack) => {
+const getStackIcon = (stack) => {
     switch (stack.toLowerCase()) {
-        case 'full stack': return '🌐';
-        case 'front-end': return '💻';
-        case 'back-end': return '⚙️';
-        default: return '📦';
+        case 'full stack': return FaGlobe;
+        case 'front-end': return FaLaptopCode;
+        case 'back-end': return FaServer;
+        default: return FaBoxOpen;
     }
 };
 
-const slugify = (text) => {
-    const withoutAccents = Array.from(text.normalize('NFD'))
-        .filter((char) => {
-            const code = char.codePointAt(0);
-            return code < 0x0300 || code > 0x036f; // faixa das marcas diacríticas combinantes
-        })
-        .join('');
-
-    return withoutAccents
-        .toLowerCase()
-        .replace(/[^a-z0-9]+/g, '-')
-        .replace(/(^-|-$)/g, '');
-};
-
-export { getStackEmoji, slugify, sortProjetos };
+export { getStackIcon, sortProjetos };

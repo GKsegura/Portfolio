@@ -13,11 +13,6 @@
     }
 }
 
-.index {
-    color: var(--color-primary);
-    text-shadow: 0 0 8px rgba(169, 112, 255, 0.6), 0 0 20px rgba(86, 207, 207, 0.3);
-}
-
 .timeline {
     list-style: none;
     margin: 0;
@@ -37,7 +32,6 @@
             height: 9px;
             border-radius: 50%;
             background: var(--color-secondary);
-            box-shadow: 0 0 8px rgba(86, 207, 207, 0.7);
         }
 
         &:last-child {
@@ -63,15 +57,23 @@
 }
 
 .status {
-    padding: 0.2rem 0.6rem;
-    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.68rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     color: var(--color-primary);
-    background: rgba(169, 112, 255, 0.12);
-    border: 1px solid rgba(169, 112, 255, 0.35);
+
+    &::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: currentColor;
+    }
 }
 
 .timeline h3 {

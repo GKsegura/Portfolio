@@ -24,20 +24,15 @@
         a {
             color: var(--color-primary);
             text-decoration: none;
-            font-family: 'IBM Plex Mono', monospace;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-weight: 600;
             display: flex;
             align-items: center;
             gap: 0.3rem;
-            transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+            transition: color 0.3s ease;
 
             &:hover {
                 color: var(--color-secondary);
-                text-shadow: 0 0 8px rgba(86, 207, 207, 0.5);
-                transform: scale(1.05);
             }
 
             .icon {

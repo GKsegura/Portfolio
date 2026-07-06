@@ -1,5 +1,5 @@
 import { formatPeriod } from '@utils/date'
-import { getStackEmoji, slugify } from '@utils/project'
+import { getStackIcon } from '@utils/project'
 import React, { useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import { FaGithub, FaTimes } from 'react-icons/fa'
@@ -8,6 +8,7 @@ import styles from './Modal.module.css'
 const Modal = ({ projeto, onClose }) => {
 
     const DEFAULT_IMAGE = '/assets/default-project.svg';
+    const StackIcon = projeto.stack ? getStackIcon(projeto.stack) : null
 
     useEffect(() => {
         const handleKeyDown = (e) => { if (e.key === 'Escape') onClose() }
@@ -26,7 +27,6 @@ const Modal = ({ projeto, onClose }) => {
 
                 <div className={styles.header}>
                     <div>
-                        <span className={styles.endpoint}>GET /projetos/{slugify(projeto.title)}</span>
                         <h3>{projeto.title}</h3>
                     </div>
                     <button
@@ -78,7 +78,8 @@ const Modal = ({ projeto, onClose }) => {
 
                         {projeto.stack && (
                             <span className={styles.stack}>
-                                <strong>{getStackEmoji(projeto.stack)} Stack:</strong> {projeto.stack}
+                                <StackIcon size={12} />
+                                <strong>Stack:</strong> {projeto.stack}
                             </span>
                         )}
 

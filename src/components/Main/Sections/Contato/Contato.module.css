@@ -17,11 +17,6 @@
         display: flex;
         align-items: baseline;
         gap: 0.6rem;
-
-        .index {
-            color: var(--color-primary);
-            text-shadow: 0 0 8px rgba(169, 112, 255, 0.7), 0 0 26px rgba(86, 207, 207, 0.4);
-        }
     }
 
     .description {
@@ -41,9 +36,6 @@
 
     .cta {
         text-decoration: none;
-        font-family: 'IBM Plex Mono', monospace;
-        text-transform: uppercase;
-        letter-spacing: 0.04em;
         font-weight: 600;
         display: inline-flex;
         align-items: center;
@@ -51,7 +43,7 @@
         transition: all var(--transition-normal);
         padding: 0.9rem 1.75rem;
         border-radius: var(--radius);
-        font-size: 0.85rem;
+        font-size: 0.95rem;
     }
 
     .ctaEmail {
@@ -78,12 +70,7 @@
         &:hover {
             background-color: rgba(86, 207, 207, 0.1);
             border-color: var(--color-secondary);
-            transform: translateY(-3px);
             color: var(--color-secondary);
-        }
-
-        &:active {
-            transform: translateY(-1px);
         }
     }
 

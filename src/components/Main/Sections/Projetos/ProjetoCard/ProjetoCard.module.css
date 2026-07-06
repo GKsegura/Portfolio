@@ -20,26 +20,6 @@
         border-color 0.25s ease;
 }
 
-.ghostNumber {
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    right: 1.5rem;
-    transform: translateY(-50%);
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 900;
-    font-size: 5.5rem;
-    line-height: 1;
-    color: var(--color-primary);
-    opacity: 0.07;
-    pointer-events: none;
-    user-select: none;
-}
-
-.featured .ghostNumber {
-    font-size: 7rem;
-}
-
 .projeto:hover {
     background:
         linear-gradient(180deg, rgba(169, 112, 255, 0.16), transparent 50%),
@@ -101,23 +81,14 @@
 
 .featuredLabel {
     width: fit-content;
-    padding: 0.35rem 0.75rem;
-    border-radius: 999px;
-    background: rgba(169, 112, 255, 0.14);
-    border: 1px solid rgba(169, 112, 255, 0.4);
+    padding-left: 0.6rem;
+    border-left: 2px solid var(--color-primary);
     color: var(--color-primary);
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-}
-
-.endpoint {
-    font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.7rem;
-    color: var(--color-text-muted);
-    opacity: 0.6;
 }
 
 .top {
@@ -132,12 +103,11 @@
     line-height: 1.1;
     margin: 0;
     text-align: left;
-    filter: drop-shadow(0 3px 10px rgba(169, 112, 255, 0.3));
-    transition: filter 0.35s ease;
+    transition: color 0.25s ease;
 }
 
 .projeto:hover .top h3 {
-    filter: drop-shadow(0 3px 16px rgba(169, 112, 255, 0.55));
+    color: var(--color-primary);
 }
 
 .featured .top h3 {
@@ -180,15 +150,14 @@
 }
 
 .stack {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     width: fit-content;
-    padding: 0.42rem 0.85rem;
-    border-radius: 999px;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.75rem;
     font-weight: 600;
-    background-color: rgba(169, 112, 255, 0.1);
     color: var(--color-primary);
-    border: 1px solid rgba(169, 112, 255, 0.45);
 }
 
 .linkContainer {
@@ -213,15 +182,13 @@
     transition:
         color 0.25s ease,
         border-color 0.25s ease,
-        background 0.25s ease,
-        transform 0.35s var(--ease-spring);
+        background 0.25s ease;
 }
 
 .link:hover {
     color: var(--color-primary);
     border-color: var(--color-primary);
     background: rgba(169, 112, 255, 0.06);
-    transform: translateY(-2px);
 }
 
 .verMaisButton {
@@ -252,45 +219,43 @@
 
 .status {
     flex-shrink: 0;
-    padding: 0.32rem 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
     font-family: 'IBM Plex Mono', monospace;
-    font-size: 0.62rem;
+    font-size: 0.68rem;
     font-weight: 600;
-    border-radius: 999px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    border: 1px solid transparent;
     white-space: nowrap;
+
+    &::before {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: currentColor;
+    }
 }
 
 .concluído {
-    background-color: rgba(0, 180, 90, 0.12);
     color: #40d982;
-    border-color: rgba(64, 217, 130, 0.35);
 }
 
 .emdesenvolvimento {
-    background-color: rgba(255, 165, 0, 0.12);
     color: #ffc057;
-    border-color: rgba(255, 192, 87, 0.35);
 }
 
 .pausado {
-    background-color: rgba(220, 20, 60, 0.12);
     color: #ff6b8a;
-    border-color: rgba(255, 107, 138, 0.35);
 }
 
 .emusoativo {
-    background-color: rgba(0, 180, 90, 0.12);
     color: #40d982;
-    border-color: rgba(64, 217, 130, 0.35);
 }
 
 .emevolução {
-    background-color: rgba(100, 100, 255, 0.12);
     color: #9da0ff;
-    border-color: rgba(157, 160, 255, 0.35);
 }
 
 @media (max-width: 640px) {
@@ -302,17 +267,6 @@
     .thumb {
         width: 100%;
         flex: 0 0 auto;
-    }
-
-    .ghostNumber {
-        top: 1.25rem;
-        right: 1.25rem;
-        transform: none;
-        font-size: 3rem;
-    }
-
-    .featured .ghostNumber {
-        font-size: 3.5rem;
     }
 
     .top {

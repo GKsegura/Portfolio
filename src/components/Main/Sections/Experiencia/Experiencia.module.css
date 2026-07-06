@@ -13,11 +13,6 @@
     }
 }
 
-.index {
-    color: var(--color-primary);
-    text-shadow: 0 0 8px rgba(169, 112, 255, 0.6), 0 0 20px rgba(86, 207, 207, 0.3);
-}
-
 .timeline {
     list-style: none;
     margin: 0;
@@ -37,7 +32,6 @@
             height: 9px;
             border-radius: 50%;
             background: var(--color-primary);
-            box-shadow: 0 0 8px rgba(169, 112, 255, 0.7);
         }
 
         &:last-child {

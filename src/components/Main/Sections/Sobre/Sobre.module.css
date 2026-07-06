@@ -28,44 +28,12 @@
             width: 100%;
             aspect-ratio: 4 / 5;
             border: 1px solid var(--color-surface-border);
+            border-radius: var(--radius-small);
+            overflow: hidden;
             transition: transform 0.35s ease;
-
-            &::before,
-            &::after {
-                content: '';
-                position: absolute;
-                width: 26px;
-                height: 26px;
-                z-index: 3;
-                pointer-events: none;
-            }
-
-            &::before {
-                top: -8px;
-                left: -8px;
-                border-top: 3px solid var(--color-primary);
-                border-left: 3px solid var(--color-primary);
-                filter: drop-shadow(0 0 6px rgba(169, 112, 255, 0.6));
-            }
-
-            &::after {
-                bottom: -8px;
-                right: -8px;
-                border-bottom: 3px solid var(--color-secondary);
-                border-right: 3px solid var(--color-secondary);
-                filter: drop-shadow(0 0 6px rgba(86, 207, 207, 0.6));
-            }
 
             &:hover {
                 transform: translateY(-4px);
-
-                img {
-                    filter: grayscale(0.6) contrast(1.1);
-                }
-
-                .photoTint {
-                    opacity: 0.55;
-                }
             }
 
             img {
@@ -74,34 +42,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                filter: grayscale(1) contrast(1.1);
-                transition: filter 0.35s ease;
             }
-        }
-
-        .photoTint {
-            position: absolute;
-            inset: 0;
-            z-index: 1;
-            background: linear-gradient(135deg, var(--color-primary) 0%, transparent 55%, var(--color-secondary) 100%);
-            mix-blend-mode: color;
-            opacity: 0.85;
-            pointer-events: none;
-            transition: opacity 0.35s ease;
-        }
-
-        .photoScanlines {
-            position: absolute;
-            inset: 0;
-            z-index: 2;
-            pointer-events: none;
-            background: repeating-linear-gradient(to bottom,
-                    rgba(0, 0, 0, 0.25) 0px,
-                    rgba(0, 0, 0, 0.25) 1px,
-                    transparent 2px,
-                    transparent 4px);
-            mix-blend-mode: multiply;
-            opacity: 0.5;
         }
 
         .terminal {
@@ -144,27 +85,6 @@
             color: var(--color-text-muted);
         }
 
-        .statusBadge {
-            margin-left: auto;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-            font-family: 'IBM Plex Mono', monospace;
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-            color: #40d982;
-        }
-
-        .statusDot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #40d982;
-            box-shadow: 0 0 6px rgba(64, 217, 130, 0.8);
-            animation: status-pulse 2s ease-in-out infinite;
-        }
-
         .terminalBody {
             padding: 0.9rem 0.85rem;
             font-family: 'IBM Plex Mono', monospace;
@@ -205,9 +125,8 @@
             text-align: center;
 
             .highlight {
-                color: var(--color-text);
+                color: var(--color-primary);
                 font-weight: 700;
-                text-shadow: 0 0 8px rgba(169, 112, 255, 0.8), 0 0 22px rgba(169, 112, 255, 0.5), 0 0 38px rgba(86, 207, 207, 0.35);
             }
 
             .subtitulo {
@@ -248,10 +167,8 @@
                 font-weight: 600;
 
                 &::after {
-                    content: '//';
-                    margin-left: 0.5rem;
+                    content: ':';
                     color: var(--color-secondary);
-                    opacity: 0.7;
                 }
             }
 
@@ -293,10 +210,7 @@
                 gap: 0.4rem;
                 padding: 0.7rem 1.4rem;
                 border-radius: var(--radius);
-                font-family: 'IBM Plex Mono', monospace;
-                text-transform: uppercase;
-                letter-spacing: 0.04em;
-                font-size: 0.8rem;
+                font-size: 0.95rem;
                 font-weight: 600;
                 text-decoration: none;
                 transition: all var(--transition-normal);
@@ -321,8 +235,6 @@
                 &:hover {
                     background-color: rgba(86, 207, 207, 0.1);
                     border-color: var(--color-secondary);
-                    transform: translateY(-2px);
-                    color: var(--color-secondary);
                 }
             }
 
@@ -344,11 +256,6 @@
     51%, 100% { opacity: 0; }
 }
 
-@keyframes status-pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.35; }
-}
-
 .tecnologias {
     width: 100%;
     max-width: 1200px;
@@ -363,11 +270,6 @@
         align-items: baseline;
         justify-content: flex-start;
         gap: 0.6rem;
-
-        .index {
-            color: var(--color-primary);
-            text-shadow: 0 0 8px rgba(169, 112, 255, 0.6), 0 0 20px rgba(86, 207, 207, 0.3);
-        }
 
         @media (max-width: 768px) {
             font-size: 1.75rem;
