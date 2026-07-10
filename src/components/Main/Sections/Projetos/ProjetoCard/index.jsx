@@ -80,17 +80,28 @@ const ProjetoCard = ({ projeto, onVerMais, animationDelay = 0, featured = false 
                 )}
 
                 <div className={styles.linkContainer}>
-                    <a
-                        href={projeto.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.link}
-                        onClick={(e) => e.stopPropagation()}
-                        aria-label={`Abrir ${projeto.title} no GitHub`}
-                    >
-                        <FaGithub size={14} />
-                        GitHub
-                    </a>
+                    {projeto.githubPrivate ? (
+                        <span
+                            className={styles.link}
+                            aria-disabled="true"
+                            title="Repositório privado"
+                        >
+                            <FaGithub size={14} />
+                            Repositório privado
+                        </span>
+                    ) : (
+                        <a
+                            href={projeto.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.link}
+                            onClick={(e) => e.stopPropagation()}
+                            aria-label={`Abrir ${projeto.title} no GitHub`}
+                        >
+                            <FaGithub size={14} />
+                            GitHub
+                        </a>
+                    )}
 
                     <button
                         className={styles.verMaisButton}

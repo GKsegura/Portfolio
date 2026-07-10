@@ -18,6 +18,12 @@ const getRelevantYear = (projeto) => {
 
 const sortProjetos = (projetos) => {
     return [...projetos].sort((a, b) => {
+        // prioridade manual (hierarquia definida do portfólio)
+        const priorityA = a.priority ?? Infinity;
+        const priorityB = b.priority ?? Infinity;
+
+        if (priorityA !== priorityB) return priorityA - priorityB;
+
         // prioridade por status
         const statusDiff =
             statusPriority[a.status] - statusPriority[b.status];

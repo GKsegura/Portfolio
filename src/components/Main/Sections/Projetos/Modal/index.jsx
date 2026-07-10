@@ -84,15 +84,26 @@ const Modal = ({ projeto, onClose }) => {
                         )}
 
                         <div className={styles.linkContainer}>
-                            <a
-                                href={projeto.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={styles.link}
-                            >
-                                <FaGithub size={16} />
-                                Ver projeto no GitHub
-                            </a>
+                            {projeto.githubPrivate ? (
+                                <span
+                                    className={styles.link}
+                                    aria-disabled="true"
+                                    title="Repositório privado"
+                                >
+                                    <FaGithub size={16} />
+                                    Repositório privado
+                                </span>
+                            ) : (
+                                <a
+                                    href={projeto.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.link}
+                                >
+                                    <FaGithub size={16} />
+                                    Ver projeto no GitHub
+                                </a>
+                            )}
                         </div>
                     </div>
                 </div>
