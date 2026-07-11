@@ -23,7 +23,7 @@
   {
     "id": 2,
     "title": "Portfólio",
-    "priority": 7,
+    "priority": 8,
     "shortDescription": "Este portfólio que você está navegando agora. Construído com React, Vite e CSS Modules - em constante evolução.",
     "description": "Este repositório serve como portfólio principal de projetos desenvolvidos por mim.\n\nAqui você encontra aplicações web completas, APIs RESTful e experimentações que demonstram minha evolução como desenvolvedor.\n\nMeus projetos são focados em boas práticas de código, clareza arquitetural e, sempre que possível, uma pitada de criatividade.",
     "link": "https://github.com/GKsegura/repositorio-gksegura",
@@ -134,6 +134,27 @@
     "image": "/assets/chess-system.png",
     "languages": [
       "Java"
+    ],
+    "stack": "Back-end",
+    "period": {
+      "start": 2026,
+      "end": 2026
+    },
+    "status": "Concluído"
+  },
+  {
+    "id": 8,
+    "title": "Workshop Spring Boot MongoDB",
+    "priority": 7,
+    "shortDescription": "API RESTful de um blog (usuários, posts e comentários) com Spring Boot e MongoDB - explorando modelagem de documentos, referências e queries NoSQL.",
+    "description": "API RESTful de um sistema de blog desenvolvida com Spring Boot e MongoDB.\n\nO projeto explora particularidades do MongoDB em relação a um banco relacional: documentos embutidos (comentários vivem dentro do próprio post), referências entre documentos com @DBRef (usuários e seus posts) e queries customizadas com expressões nativas do Mongo, incluindo busca textual combinada com intervalo de datas.\n\nInclui tratamento de exceções personalizado e documentação interativa com Swagger/OpenAPI.",
+    "link": "https://github.com/GKsegura/workshop-springboot-mongodb",
+    "image": "/assets/workshopmongo.png",
+    "languages": [
+      "Java",
+      "Spring Boot",
+      "MongoDB",
+      "Maven"
     ],
     "stack": "Back-end",
     "period": {
