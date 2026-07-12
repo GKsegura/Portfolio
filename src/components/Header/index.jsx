@@ -5,6 +5,7 @@ const NAV_LINKS = [
     { href: '#sobre', label: 'Sobre', id: 'sobre' },
     { href: '#experiencia', label: 'Experiência', id: 'experiencia' },
     { href: '#formacao', label: 'Formação', id: 'formacao' },
+    { href: '#historia', label: 'História', id: 'historia' },
     { href: '#projetos', label: 'Projetos', id: 'projetos' },
     { href: '#contato', label: 'Contato', id: 'contato' },
 ]
@@ -14,6 +15,7 @@ const SECTION_TO_NAV = {
     tecnologias: 'sobre',
     experiencia: 'experiencia',
     formacao: 'formacao',
+    historia: 'historia',
     projetos: 'projetos',
     contato: 'contato',
 }

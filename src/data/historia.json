@@ -1,0 +1,29 @@
+{
+    "titulo": "Minha história com tecnologia",
+    "paragrafos": [
+        {
+            "id": 1,
+            "texto": "Comecei assistindo gameplay de Minecraft no YouTube - só que, sem perceber, eu prestava mais atenção nos vídeos em que o youtuber mostrava o PC novo e o setup gamer do que na gameplay em si. Foi ali que descobri que gostava mesmo era de computador, fiquei apaixonado por hardware. Até hoje mantenho essa paixão: gosto de ter um setup bonito, não pelo lado de jogar, mas pelo gosto mesmo de montar e cuidar dele."
+        },
+        {
+            "id": 2,
+            "texto": "Entrei no CTI - Unesp Bauru pensando nisso, mas programação me pegou de jeito: fiquei de recuperação nos dois primeiros bimestres, sem entender nada. Fiz a recuperação semestral, estudei os fundamentos do zero de novo, e ainda tirei 10 no terceiro bimestre. No segundo ano, entreguei um projeto com nota máxima em tudo. No começo do terceiro, virei um dos sete líderes técnicos da turma."
+        },
+        {
+            "id": 3,
+            "texto": "No QInvest, meu TCC, fui líder técnico de um time construindo uma plataforma full-stack (Laravel + Vite) do zero."
+        },
+        {
+            "id": 4,
+            "texto": "Depois de formado, entrei de estagiário na Nexum Tecnologia. No meio do caminho, passei por um período pessoal difícil e acabei perdendo o estágio. Um tempo depois, mandei uma mensagem pro diretor da Nexum no LinkedIn perguntando se dava pra conversar. Deu certo, e voltei."
+        },
+        {
+            "id": 5,
+            "texto": "Antes de voltar, já tinha retomado o estudo sozinho: gostava de JS desde o básico que aprendi no CTI, e no estágio tinha me aprofundado um pouco mais. Nesse período aprofundei ainda mais o JavaScript e, no início de 2025, comecei a estudar React. Mas o que realmente me prendeu foi o back-end: peguei o curso de Java do Nélio Alves, indicação de um amigo, e não parei mais."
+        },
+        {
+            "id": 6,
+            "texto": "O CRONOS nasceu desse momento: uma forma de estudar Java resolvendo um problema real do meu dia a dia como Analista de Suporte. Hoje é um sistema completo, em uso ativo no trabalho."
+        }
+    ]
+}

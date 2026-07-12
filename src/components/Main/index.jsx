@@ -1,6 +1,7 @@
 import Contato from '@components/Main/Sections/Contato'
 import Experiencia from '@components/Main/Sections/Experiencia'
 import Formacao from '@components/Main/Sections/Formacao'
+import Historia from '@components/Main/Sections/Historia'
 import Projetos from '@components/Main/Sections/Projetos'
 import Sobre from '@components/Main/Sections/Sobre'
 import styles from './Main.module.css'
@@ -11,6 +12,7 @@ export default function Main() {
             <Sobre />
             <Experiencia />
             <Formacao />
+            <Historia />
             <Projetos />
             <Contato />
         </main>
