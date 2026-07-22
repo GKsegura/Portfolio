@@ -23,7 +23,7 @@
   {
     "id": 2,
     "title": "Portfólio",
-    "priority": 8,
+    "priority": 6,
     "shortDescription": "Este portfólio que você está navegando agora. Construído com React, Vite e CSS Modules - em constante evolução.",
     "description": "Este repositório serve como portfólio principal de projetos desenvolvidos por mim.\n\nAqui você encontra aplicações web completas, APIs RESTful e experimentações que demonstram minha evolução como desenvolvedor.\n\nMeus projetos são focados em boas práticas de código, clareza arquitetural e, sempre que possível, uma pitada de criatividade.",
     "link": "https://github.com/GKsegura/repositorio-gksegura",
@@ -44,7 +44,7 @@
     "title": "EcoTube",
     "priority": 4,
     "shortDescription": "E-commerce de canudos de vidro sustentáveis com catálogo, carrinho e simulação de checkout. Foco em usabilidade e consumo consciente.",
-    "description": "EcoTube é um e-commerce de canudos de vidro sustentáveis, criado com o objetivo de promover o consumo consciente através da tecnologia.\n\nA plataforma permite a navegação por produtos, exibição de detalhes, adição ao carrinho e simula a jornada de compra de forma intuitiva.\n\nO projeto foi desenvolvido com foco na usabilidade, componentização e um visual limpo e funcional - alinhando propósito ecológico e boa experiência do usuário.",
+    "description": "EcoTube é um e-commerce de canudos de vidro sustentáveis, criado com o objetivo de promover o consumo consciente através da tecnologia.\n\nA plataforma permite a navegação por produtos, exibição de detalhes, adição ao carrinho e simula a jornada de compra de forma intuitiva.\n\nO projeto foi desenvolvido com foco na usabilidade, componentização e um visual limpo e funcional, alinhando propósito ecológico e boa experiência do usuário.",
     "link": "https://github.com/GKsegura/EcoTube",
     "image": "/assets/ecotube.png",
     "languages": [
@@ -66,8 +66,8 @@
     "featured": true,
     "priority": 1,
     "githubPrivate": true,
-    "shortDescription": "API REST para gerenciamento de tarefas e controle de tempo, usada no meu dia a dia como Analista de Suporte na Nexum Tecnologia.",
-    "description": "CRONOS API é a evolução do projeto CRONOS original, agora estruturado como uma API REST para gerenciamento de tarefas e controle de tempo de trabalho.\n\nO backend foi desenvolvido em Java com foco em organização, separação de responsabilidades e boas práticas, servindo como base para integração com a CRONOS APP.\n\nO projeto também representa minha transição de aplicações em terminal para arquiteturas mais modernas e escaláveis - e está em uso ativo no meu trabalho.",
+    "shortDescription": "API REST para gerenciamento de tarefas e controle de tempo, utilizada diariamente no meu trabalho como Analista de Suporte.",
+    "description": "CRONOS API é a evolução do projeto CRONOS original, agora estruturado como uma API REST para gerenciamento de tarefas e controle de tempo.\n\nO backend foi desenvolvido em Java com foco em organização, separação de responsabilidades e boas práticas, servindo como base para integração com a CRONOS APP.\n\nO projeto representa minha evolução de aplicações em terminal para uma arquitetura baseada em APIs, sendo utilizado diariamente como ferramenta de apoio às minhas atividades profissionais.",
     "link": "https://github.com/GKsegura/CRONOS-API",
     "image": "/assets/cronos-api.png",
     "languages": [
@@ -75,7 +75,7 @@
       "Maven",
       "SQLite"
     ],
-    "stack": "Back-end",
+    "stack": "API REST",
     "period": {
       "start": 2025
     },
@@ -87,8 +87,8 @@
     "featured": true,
     "priority": 2,
     "githubPrivate": true,
-    "shortDescription": "Interface frontend do sistema CRONOS, consumindo a CRONOS API para gerenciar tarefas e controle de tempo no dia a dia.",
-    "description": "CRONOS APP é a interface frontend do sistema CRONOS, desenvolvida para consumir a CRONOS API e oferecer uma experiência visual amigável para o gerenciamento de tarefas e controle de tempo.\n\nO projeto foca em componentização, organização de estados e clareza na interface, transformando uma ferramenta técnica em uma aplicação prática de uso diário.\n\nUtilizado ativamente na Nexum Tecnologia como ferramenta de suporte ao meu trabalho como Analista.",
+    "shortDescription": "Frontend do sistema CRONOS, consumindo a API para gerenciamento de tarefas e controle de tempo.",
+    "description": "CRONOS APP é a interface frontend do sistema CRONOS, desenvolvida em React para consumir a CRONOS API e oferecer uma experiência intuitiva para gerenciamento de tarefas.\n\nO projeto prioriza componentização, organização de estados e uma interface simples para uso diário.\n\nÉ utilizado ativamente como ferramenta de apoio às minhas atividades profissionais.",
     "link": "https://github.com/GKsegura/CRONOS-APP",
     "image": "/assets/cronos-app.png",
     "languages": [
@@ -96,7 +96,7 @@
       "JavaScript",
       "CSS"
     ],
-    "stack": "Front-end",
+    "stack": "React",
     "period": {
       "start": 2026
     },
@@ -104,62 +104,22 @@
   },
   {
     "id": 6,
-    "title": "Workshop Spring Boot JPA",
-    "priority": 6,
-    "shortDescription": "API RESTful de sistema de pedidos com Spring Boot, JPA/Hibernate e PostgreSQL - demonstração de domínio do ecossistema Java back-end.",
-    "description": "API RESTful de um sistema de pedidos desenvolvida com Spring Boot, JPA/Hibernate e PostgreSQL.\n\nO projeto implementa um modelo de domínio completo com usuários, pedidos, produtos, categorias e pagamentos, seguindo uma arquitetura em camadas (Resource → Service → Repository).\n\nInclui CRUD completo, tratamento de exceções personalizado, perfis de ambiente separados para teste e produção, e documentação interativa com Swagger/OpenAPI.",
-    "link": "https://github.com/GKsegura/springboot-jpa",
-    "image": "/assets/springbootjpa.png",
-    "languages": [
-      "Java",
-      "Spring Boot",
-      "Hibernate",
-      "PostgreSQL",
-      "Maven"
-    ],
-    "stack": "Back-end",
-    "period": {
-      "start": 2026,
-      "end": 2026
-    },
-    "status": "Concluído"
-  },
-  {
-    "id": 7,
-    "title": "Chess System",
+    "title": "Horta Inteligente",
     "priority": 5,
-    "shortDescription": "Sistema de jogo de xadrez desenvolvido, com foco em lógica complexa e aplicação prática de POO em Java.",
-    "description": "Chess System foi uma aplicação de terminal desenvolvida em Java durante o curso de Programação Orientada a Objetos do Nelio Alves.\n\nO projeto teve como objetivo implementar um sistema completo de jogo de xadrez, explorando regras oficiais e uma lógica de domínio mais avançada.\n\nA aplicação contempla conceitos fundamentais como encapsulamento, herança, polimorfismo, tratamento de exceções e organização em camadas.\n\nEste projeto foi essencial para consolidar minha base em orientação a objetos e fortalecer minha capacidade de modelar regras de negócio mais complexas.\n\nO projeto também representou um avanço significativo na minha capacidade de lidar com lógica complexa e regras de negócio detalhadas.",
-    "link": "https://github.com/GKsegura/chess-system-java",
-    "image": "/assets/chess-system.png",
+    "shortDescription": "Sistema de irrigação automatizado utilizando Arduino, sensor de umidade do solo, display LCD e acionamento automático de bomba d'água.",
+    "description": "Projeto de automação desenvolvido com Arduino para monitorar a umidade do solo e controlar automaticamente a irrigação. O sistema integra sensores, display LCD, relé e bomba d'água para reduzir a intervenção manual.\n\nO projeto demonstra integração entre hardware e software, lógica de programação, leitura de sensores e controle de dispositivos eletrônicos.",
+    "link": "https://github.com/GKsegura/horta-inteligente",
+    "image": "/assets/horta-inteligente.png",
     "languages": [
-      "Java"
+      "C++",
+      "Arduino",
+      "LCD",
+      "Sensores"
     ],
-    "stack": "Back-end",
+    "stack": "Embarcados",
     "period": {
-      "start": 2026,
-      "end": 2026
-    },
-    "status": "Concluído"
-  },
-  {
-    "id": 8,
-    "title": "Workshop Spring Boot MongoDB",
-    "priority": 7,
-    "shortDescription": "API RESTful de um blog (usuários, posts e comentários) com Spring Boot e MongoDB - explorando modelagem de documentos, referências e queries NoSQL.",
-    "description": "API RESTful de um sistema de blog desenvolvida com Spring Boot e MongoDB.\n\nO projeto explora particularidades do MongoDB em relação a um banco relacional: documentos embutidos (comentários vivem dentro do próprio post), referências entre documentos com @DBRef (usuários e seus posts) e queries customizadas com expressões nativas do Mongo, incluindo busca textual combinada com intervalo de datas.\n\nInclui tratamento de exceções personalizado e documentação interativa com Swagger/OpenAPI.",
-    "link": "https://github.com/GKsegura/workshop-springboot-mongodb",
-    "image": "/assets/workshopmongo.png",
-    "languages": [
-      "Java",
-      "Spring Boot",
-      "MongoDB",
-      "Maven"
-    ],
-    "stack": "Back-end",
-    "period": {
-      "start": 2026,
-      "end": 2026
+      "start": 2023,
+      "end": 2023
     },
     "status": "Concluído"
   }
