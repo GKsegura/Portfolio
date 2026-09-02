@@ -24,6 +24,10 @@
         {
             "id": 6,
             "texto": "Quando voltei à Nexum, voltei diferente. O CRONOS nasceu daí: uma forma de estudar Java resolvendo um problema real do meu dia a dia como Analista de Suporte. Hoje é um sistema completo, em uso ativo no trabalho."
+        },
+        {
+            "id": 7,
+            "texto": "Enquanto o CRONOS ganhava forma, topei o processo seletivo interno pro time de produto NxCoop: provas técnicas, entrevistas, a chance de mostrar na prática o que vinha estudando sozinho. Passei - e em setembro de 2026 assumi a vaga de Desenvolvedor Fullstack (Júnior), hoje trabalhando com Java, Spring Boot e Vue 3 no dia a dia."
         }
     ]
 }

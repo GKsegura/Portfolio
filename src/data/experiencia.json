@@ -2,11 +2,18 @@
     "titulo": "Experiência",
     "itens": [
         {
+            "cargo": "Desenvolvedor Fullstack (Júnior)",
+            "empresa": "Nexum Tecnologia",
+            "local": "Bauru, SP",
+            "inicio": "2026-09",
+            "fim": null
+        },
+        {
             "cargo": "Analista de Suporte (Júnior)",
             "empresa": "Nexum Tecnologia",
             "local": "Bauru, SP",
             "inicio": "2026-01",
-            "fim": null
+            "fim": "2026-08"
         },
         {
             "cargo": "Analista de Suporte (Trainee)",
