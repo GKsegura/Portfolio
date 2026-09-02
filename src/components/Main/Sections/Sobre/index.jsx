@@ -16,9 +16,9 @@ const Sobre = () => {
     const promptLabel = 'visitante@portfolio:~$'
     const terminalLines = [
         { type: 'cmd', text: 'whoami' },
-        { type: 'out', text: `${sobreData.intro.nome}, dev back-end` },
+        { type: 'out', text: `${sobreData.intro.nome}, dev fullstack` },
         { type: 'cmd', text: 'cat foco.txt' },
-        { type: 'out', text: 'APIs REST, automação de processos e integração de dados' },
+        { type: 'out', text: 'Back-end com Java/Spring, front com Vue 3 e APIs REST' },
     ]
 
     return (
