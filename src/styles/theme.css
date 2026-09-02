@@ -1,0 +1,66 @@
+@theme {
+  --color-bg: #020203;
+  --color-primary: #a970ff;
+  --color-primary-hover: #c49fff;
+  --color-secondary: #56cfcf;
+  --color-accent: rgba(255, 255, 255, 0.06);
+
+  --color-text: #f0f0ff;
+  --color-text-muted: #b0aecd;
+  --color-text-inverted: #0e0e17;
+
+  --color-surface: rgba(255, 255, 255, 0.07);
+  --color-surface-hover: rgba(169, 112, 255, 0.07);
+  --color-surface-border: rgba(255, 255, 255, 0.12);
+
+  --blur-glass: 16px;
+
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  --shadow-small: 0 4px 16px rgba(0, 0, 0, 0.25);
+
+  --radius: 16px;
+  --radius-small: 8px;
+
+  --duration-fast: 0.2s;
+  --duration-normal: 0.3s;
+  --duration-slow: 0.5s;
+
+  /* curva padrão do Tailwind pra "ease-out" é diferente da nossa - por isso o nome próprio */
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-portfolio-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-reveal: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --font-sans: 'Sora', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --animate-cursor-blink: cursor-blink 1s step-end infinite;
+  --animate-fade-in: fade-in 0.25s ease;
+}
+
+@keyframes cursor-blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@utility glass {
+  background: var(--color-surface);
+  border: 1px solid var(--color-surface-border);
+  backdrop-filter: blur(var(--blur-glass));
+  -webkit-backdrop-filter: blur(var(--blur-glass));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
+  transition: all var(--duration-normal) ease;
+}
+
+/* usados só no gradiente radial fixo do body - não valem virar token reutilizável */
+:root {
+  --gradient-1: rgba(169, 112, 255, 0.09);
+  --gradient-2: rgba(86, 207, 207, 0.05);
+}
