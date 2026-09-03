@@ -1,16 +1,16 @@
 {
     "intro": {
         "nome": "José Segura",
-        "titulo": "Desenvolvedor Full-Stack",
-        "subtitulo": "Desenvolvedor Fullstack focado em Java, Spring Boot e Vue 3 - construo sistemas que economizam tempo e escalam.",
+        "titulo": "Desenvolvedor Full Stack",
+        "subtitulo": "Desenvolvedor Full Stack focado em Java, Spring Boot e Vue 3 - construo sistemas que economizam tempo e escalam.",
         "fichaTecnica": [
             {
                 "label": "Cargo",
-                "valor": "Desenvolvedor Fullstack (Júnior) - Nexum Tecnologia"
+                "valor": "Desenvolvedor Full Stack (Júnior) - Nexum Tecnologia"
             },
             {
                 "label": "Foco",
-                "valor": "Desenvolvimento Full-Stack no time de produto NxCoop - Java, Spring Boot e Vue 3"
+                "valor": "Desenvolvimento Full Stack no time de produto NxCoop - Java, Spring Boot e Vue 3"
             }
         ],
         "paragrafos": [
@@ -44,6 +44,10 @@
             {
                 "nome": "Vue.js",
                 "icone": "vuejs/vuejs-original.svg"
+            },
+            {
+                "nome": "TypeScript",
+                "icone": "typescript/typescript-original.svg"
             },
             {
                 "nome": "MySQL",

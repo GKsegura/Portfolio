@@ -1,46 +1,21 @@
 <script setup lang="ts">
-const sectionClass = 'w-full py-16 [scroll-margin-top:clamp(4rem,10vh,5rem)]'
+import SobreSection from '@components/sections/SobreSection.vue'
+import ExperienciaSection from '@components/sections/ExperienciaSection.vue'
+import FormacaoSection from '@components/sections/FormacaoSection.vue'
+import HistoriaSection from '@components/sections/HistoriaSection.vue'
+import ProjetosSection from '@components/sections/projetos/ProjetosSection.vue'
+import ContatoSection from '@components/sections/ContatoSection.vue'
 </script>
 
 <template>
   <main
     class="flex min-h-screen w-full flex-col items-center pt-[clamp(1vh,10vh,10rem)] text-text"
   >
-    <section
-      id="sobre"
-      :class="sectionClass"
-    >
-      Sobre (em breve)
-    </section>
-    <section
-      id="experiencia"
-      :class="sectionClass"
-    >
-      Experiência (em breve)
-    </section>
-    <section
-      id="formacao"
-      :class="sectionClass"
-    >
-      Formação (em breve)
-    </section>
-    <section
-      id="historia"
-      :class="sectionClass"
-    >
-      História (em breve)
-    </section>
-    <section
-      id="projetos"
-      :class="sectionClass"
-    >
-      Projetos (em breve)
-    </section>
-    <section
-      id="contato"
-      :class="sectionClass"
-    >
-      Contato (em breve)
-    </section>
+    <SobreSection />
+    <ExperienciaSection />
+    <FormacaoSection />
+    <HistoriaSection />
+    <ProjetosSection />
+    <ContatoSection />
   </main>
 </template>

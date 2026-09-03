@@ -7,7 +7,13 @@ export interface EducacaoItem {
   detalhe?: string
 }
 
-export interface EducacaoData {
+export interface EducacaoGroup {
   titulo: string
   itens: EducacaoItem[]
+}
+
+export interface EducacaoData {
+  titulo: string
+  academica: EducacaoGroup
+  complementares: EducacaoGroup
 }

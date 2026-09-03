@@ -1,19 +1,34 @@
 {
     "titulo": "Formação",
-    "itens": [
-        {
-            "curso": "Técnico Integrado em Informática",
-            "instituicao": "Colégio Técnico Industrial \"Prof. Isaac Portal Roldán\" - UNESP",
-            "inicio": "2021-01",
-            "fim": "2023-12",
-            "status": "Concluído"
-        },
-        {
-            "curso": "Java Completo: Programação Orientada a Objetos + Projetos",
-            "instituicao": "Udemy - Nélio Alves",
-            "inicio": null,
-            "fim": null,
-            "status": "Concluído"
-        }
-    ]
+    "academica": {
+        "titulo": "Formação acadêmica",
+        "itens": [
+            {
+                "curso": "Técnico Integrado em Informática",
+                "instituicao": "Colégio Técnico Industrial \"Prof. Isaac Portal Roldán\" - UNESP",
+                "inicio": "2021-01",
+                "fim": "2023-12",
+                "status": "Concluído"
+            }
+        ]
+    },
+    "complementares": {
+        "titulo": "Cursos complementares",
+        "itens": [
+            {
+                "curso": "Java Completo: Programação Orientada a Objetos + Projetos",
+                "instituicao": "Udemy - Nélio Alves",
+                "inicio": "2025",
+                "fim": "2026",
+                "status": "Concluído"
+            },
+            {
+                "curso": "Banco de Dados SQL do Zero ao Avançado + Projetos Reais",
+                "instituicao": "Udemy - Andre Iacono",
+                "inicio": "2026",
+                "fim": "2026",
+                "status": "Concluído"
+            }
+        ]
+    }
 }
