@@ -2,16 +2,16 @@
 
 Este repositório contém o código-fonte do meu **portfólio como desenvolvedor web**. O objetivo é apresentar de forma clara e moderna os meus projetos, habilidades técnicas e formas de contato.
 
-Construído com **React** + **Vite**, o site foi pensado para ter uma performance rápida, design responsivo e visual atrativo. Ele é constantemente atualizado conforme evoluo na minha jornada como desenvolvedor.
+Construído com **Vue 3**, **TypeScript**, **Tailwind CSS** e **Vite**, o site foi pensado para ter uma performance rápida, design responsivo e visual atrativo. Ele é constantemente atualizado conforme evoluo na minha jornada como desenvolvedor.
 
 ---
 
 ## ✨ Tecnologias Utilizadas
 
-- React
+- Vue 3 (Composition API + `<script setup>`)
+- TypeScript
+- Tailwind CSS
 - Vite
-- JavaScript (ES6+)
-- CSS / HTML
 - ESLint (padronização de código)
 
 ---
