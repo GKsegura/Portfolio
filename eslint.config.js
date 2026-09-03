@@ -13,7 +13,11 @@ export default defineConfigWithVueTs(
       globals: globals.browser,
     },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      // desliga a regra base (não entende sintaxe de tipo do TS, ex.: nomes de
+      // parâmetro em defineEmits<{ (e: 'x'): void }>()) - só a versão do
+      // @typescript-eslint (já vem em vueTsConfigs.recommended) fica ativa.
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },
 )
