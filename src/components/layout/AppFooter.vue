@@ -10,7 +10,7 @@ const linkClass =
 
 <template>
   <footer
-    class="mt-auto flex w-full flex-col items-center gap-4 border-t border-surface-border p-6 text-center text-sm text-text-muted sm:p-8"
+    class="mt-auto flex w-full flex-col items-center gap-4 border-t border-surface-border p-6 text-center text-sm text-text-muted md:p-8"
   >
     <p>Desenvolvido por <strong>José Segura</strong> • © {{ new Date().getFullYear() }}</p>
     <p>

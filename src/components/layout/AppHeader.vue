@@ -80,20 +80,20 @@ onUnmounted(() => {
   <header
     class="fixed top-0 left-0 z-[1000] flex w-full items-center justify-between overflow-hidden border-b border-surface-border bg-surface px-[clamp(1rem,5vw,2rem)] py-4 text-text backdrop-blur-glass transition-colors duration-normal hover:border-primary/50 max-md:flex-wrap max-md:px-6 max-md:py-4"
   >
-    <div class="relative z-[2] shrink-0 font-display text-lg font-bold tracking-wide text-text">
+    <div class="relative z-10 shrink-0 font-display text-lg font-bold tracking-wide text-text">
       &lt;/&gt; José Segura<span class="text-secondary">.</span>
     </div>
 
     <button
       type="button"
-      class="relative z-[1001] hidden h-8 w-8 shrink-0 flex-col justify-center gap-[5px] rounded p-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 max-md:flex"
+      class="relative z-[1001] hidden h-8 w-8 shrink-0 flex-col justify-center gap-1.5 rounded p-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 max-md:flex"
       :aria-label="isOpen ? 'Fechar menu' : 'Abrir menu'"
       :aria-expanded="isOpen"
       @click="toggleMenu"
     >
       <span
         class="block h-0.5 w-[22px] origin-center rounded-full bg-primary transition-transform duration-normal"
-        :class="isOpen ? 'translate-y-[7px] rotate-45' : ''"
+        :class="isOpen ? 'translate-y-2 rotate-45' : ''"
       />
       <span
         class="block h-0.5 w-[22px] origin-center rounded-full bg-primary transition-all duration-normal"
@@ -101,19 +101,19 @@ onUnmounted(() => {
       />
       <span
         class="block h-0.5 w-[22px] origin-center rounded-full bg-primary transition-transform duration-normal"
-        :class="isOpen ? '-translate-y-[7px] -rotate-45' : ''"
+        :class="isOpen ? '-translate-y-2 -rotate-45' : ''"
       />
     </button>
 
     <nav
-      class="relative z-[2] flex gap-6 max-md:mt-3 max-md:w-full max-md:flex-col max-md:gap-0 max-md:border-t max-md:border-surface-border max-md:pt-1 max-md:pb-2"
+      class="relative z-10 flex gap-6 max-md:mt-3 max-md:w-full max-md:flex-col max-md:gap-0 max-md:border-t max-md:border-surface-border max-md:pt-1 max-md:pb-2"
       :class="isOpen ? 'max-md:flex' : 'max-md:hidden'"
     >
       <a
         v-for="{ href, label, id } in NAV_LINKS"
         :key="id"
         :href="href"
-        class="relative text-[0.92rem] font-semibold text-text-muted no-underline transition-colors duration-normal after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-normal after:content-[''] hover:text-primary hover:after:scale-x-100 focus:underline focus:outline-none max-md:border-b max-md:border-surface-border max-md:px-1 max-md:py-3 max-md:text-[1.05rem] max-md:after:hidden max-md:last:border-b-0"
+        class="relative text-sm font-semibold text-text-muted no-underline transition-colors duration-normal after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-normal after:content-[''] hover:text-primary hover:after:scale-x-100 focus:underline focus:outline-none max-md:border-b max-md:border-surface-border max-md:px-1 max-md:py-3 max-md:text-base max-md:after:hidden max-md:last:border-b-0"
         :class="activeSection === id ? 'text-primary after:scale-x-100' : ''"
         @click="handleNavClick"
       >
