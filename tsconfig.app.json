@@ -10,8 +10,7 @@
       "@data/*": ["src/data/*"],
       "@utils/*": ["src/utils/*"],
       "@composables/*": ["src/composables/*"],
-      "@styles/*": ["src/styles/*"],
-      "@types/*": ["src/types/*"]
+      "@styles/*": ["src/styles/*"]
     }
   }
 }
