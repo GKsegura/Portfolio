@@ -24,14 +24,14 @@
     "id": 2,
     "title": "Portfólio",
     "priority": 6,
-    "shortDescription": "Este portfólio que você está navegando agora. Construído com React, Vite e CSS Modules - em constante evolução.",
+    "shortDescription": "Este portfólio que você está navegando agora. Construído com Vue 3, TypeScript e Tailwind CSS - em constante evolução.",
     "description": "Este repositório serve como portfólio principal de projetos desenvolvidos por mim.\n\nAqui você encontra aplicações web completas, APIs RESTful e experimentações que demonstram minha evolução como desenvolvedor.\n\nMeus projetos são focados em boas práticas de código, clareza arquitetural e, sempre que possível, uma pitada de criatividade.",
     "link": "https://github.com/GKsegura/repositorio-gksegura",
     "image": "/assets/repositorio.png",
     "languages": [
-      "React",
-      "JavaScript",
-      "CSS"
+      "Vue",
+      "TypeScript",
+      "Tailwind CSS"
     ],
     "stack": "Front-end",
     "period": {
