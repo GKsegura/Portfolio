@@ -49,7 +49,7 @@ function handleImageError(e: Event) {
       <img
         :src="projeto.image || DEFAULT_IMAGE"
         :alt="projeto.title"
-        class="h-full w-full object-cover object-top transition-transform duration-slow ease-out group-hover:scale-[1.07]"
+        class="h-full w-full object-cover object-top transition-transform duration-slow ease-portfolio-out group-hover:scale-[1.07]"
         @error="handleImageError"
       >
     </div>

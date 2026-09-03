@@ -54,7 +54,7 @@ onUnmounted(() => {
           <button
             type="button"
             aria-label="Fechar modal"
-            class="flex shrink-0 cursor-pointer items-center justify-center rounded-[4px] border-none bg-transparent p-1.5 text-text-muted transition-colors duration-fast hover:translate-y-0 hover:bg-primary/10 hover:text-primary"
+            class="flex shrink-0 cursor-pointer items-center justify-center rounded-[4px] border-none bg-transparent p-1.5 text-text-muted transition-colors duration-fast hover:bg-primary/10 hover:text-primary"
             @click="emit('close')"
           >
             <IconTimes :size="18" />
