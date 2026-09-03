@@ -3,8 +3,8 @@
     "id": 1,
     "title": "QInvest",
     "priority": 3,
-    "shortDescription": "Plataforma de educação financeira desenvolvida como TCC no CTI - Unesp Bauru. Atuei como líder técnico e desenvolvedor full-stack.",
-    "description": "QInvest é uma aplicação web fullstack desenvolvida como Trabalho de Conclusão de Curso (TCC) do Técnico em Informática no CTI - Colégio Técnico Industrial da Unesp Bauru (2023).\n\nO projeto tem como objetivo auxiliar no controle e planejamento de investimentos financeiros, oferecendo uma interface moderna e funcional.\n\nAtuei como líder técnico do grupo, sendo responsável pelas principais decisões arquiteturais, organização do time e integração das tecnologias. Além disso, participei ativamente como desenvolvedor full-stack, construindo tanto o backend (Laravel) quanto o frontend (Vite).",
+    "shortDescription": "Plataforma de educação financeira desenvolvida como TCC no CTI - Unesp Bauru. Atuei como líder técnico e desenvolvedor Full Stack.",
+    "description": "QInvest é uma aplicação web Full Stack desenvolvida como Trabalho de Conclusão de Curso (TCC) do Técnico em Informática no CTI - Colégio Técnico Industrial da Unesp Bauru (2023).\n\nO projeto tem como objetivo auxiliar no controle e planejamento de investimentos financeiros, oferecendo uma interface moderna e funcional.\n\nAtuei como líder técnico do grupo, sendo responsável pelas principais decisões arquiteturais, organização do time e integração das tecnologias. Além disso, participei ativamente como desenvolvedor Full Stack, construindo tanto o backend (Laravel) quanto o frontend (Vite).",
     "link": "https://github.com/GKsegura/qinvest-web",
     "image": "/assets/qinvest.png",
     "languages": [
