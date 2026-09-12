@@ -10,13 +10,13 @@
             },
             {
                 "label": "Foco",
-                "valor": "Desenvolvimento Full Stack no time de produto NxCoop - Java, Spring Boot e Vue 3"
+                "valor": "Desenvolvimento Full Stack nos produtos NxCoop e NxZap - Java, Spring Boot, Vue 3 e Node.js"
             }
         ],
         "paragrafos": [
             {
                 "id": 1,
-                "texto": "Já entreguei e-commerces, plataformas de investimentos e dashboards com integração de APIs e dados em tempo real - sempre buscando automatizar processos e entregar performance real. Confira tudo no meu <a href=\"https://github.com/GKsegura\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>."
+                "texto": "No time de produto da Nexum Tecnologia, contribuo em dois produtos SaaS: o NxCoop (CRM de gestão de clientes e funil comercial) e o NxZap (atendimento multicanal via WhatsApp, chat e SMS). Transito entre back-end em Java e Spring Boot, front-end em Vue 3 e TypeScript, e também Node.js no NxZap - com Docker e Azure DevOps organizando o fluxo de CI/CD. Confira mais no meu <a href=\"https://github.com/GKsegura\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>."
             },
             {
                 "id": 2,
@@ -50,8 +50,20 @@
                 "icone": "typescript/typescript-original.svg"
             },
             {
+                "nome": "Node.js",
+                "icone": "nodejs/nodejs-original.svg"
+            },
+            {
                 "nome": "MySQL",
                 "icone": "mysql/mysql-original.svg"
+            },
+            {
+                "nome": "MongoDB",
+                "icone": "mongodb/mongodb-original.svg"
+            },
+            {
+                "nome": "Docker",
+                "icone": "docker/docker-original.svg"
             }
         ]
     }
