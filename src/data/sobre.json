@@ -31,7 +31,7 @@
         }
     },
     "tecnologias": {
-        "titulo": "Tecnologias que mais uso",
+        "titulo": "Tecnologias do dia a dia",
         "lista": [
             {
                 "nome": "Java",
@@ -64,7 +64,40 @@
             {
                 "nome": "Docker",
                 "icone": "docker/docker-original.svg"
+            },
+            {
+                "nome": "Azure DevOps",
+                "icone": "azuredevops/azuredevops-original.svg"
             }
-        ]
+        ],
+        "outras": {
+            "titulo": "Já utilizei",
+            "lista": [
+                {
+                    "nome": "PHP",
+                    "icone": "php/php-original.svg"
+                },
+                {
+                    "nome": "Laravel",
+                    "icone": "laravel/laravel-original.svg"
+                },
+                {
+                    "nome": "PostgreSQL",
+                    "icone": "postgresql/postgresql-original.svg"
+                },
+                {
+                    "nome": "SQLite",
+                    "icone": "sqlite/sqlite-original.svg"
+                },
+                {
+                    "nome": "C#",
+                    "icone": "csharp/csharp-original.svg"
+                },
+                {
+                    "nome": "Arduino",
+                    "icone": "arduino/arduino-original.svg"
+                }
+            ]
+        }
     }
 }

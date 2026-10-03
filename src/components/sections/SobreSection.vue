@@ -172,5 +172,23 @@ const terminalLines: TerminalLine[] = [
         <span class="mt-1.5 text-center text-xs text-text-muted">{{ tech.nome }}</span>
       </li>
     </ul>
+
+    <h3 class="mt-10 mb-4 text-left text-xl text-text-muted md:text-2xl">
+      {{ data.tecnologias.outras.titulo }}
+    </h3>
+    <ul class="m-0 flex list-none flex-wrap justify-start gap-6 p-0">
+      <li
+        v-for="tech in data.tecnologias.outras.lista"
+        :key="tech.nome"
+        class="flex flex-col items-center justify-center"
+      >
+        <img
+          :src="`${urlTechnologies}${tech.icone}`"
+          :alt="tech.nome"
+          class="h-[44px] w-[44px] opacity-80 drop-shadow-[0_0_2px_rgba(255,255,255,0.2)] transition-[translate,scale,filter,opacity] duration-300 ease-in-out hover:-translate-y-1 hover:scale-[1.18] hover:opacity-100 hover:drop-shadow-[0_0_10px_rgba(169,112,255,0.55)]"
+        >
+        <span class="mt-1.5 text-center text-xs text-text-muted">{{ tech.nome }}</span>
+      </li>
+    </ul>
   </section>
 </template>

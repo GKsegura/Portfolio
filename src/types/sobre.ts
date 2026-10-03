@@ -29,5 +29,9 @@ export interface SobreData {
   tecnologias: {
     titulo: string
     lista: TecnologiaItem[]
+    outras: {
+      titulo: string
+      lista: TecnologiaItem[]
+    }
   }
 }
