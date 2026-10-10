@@ -34,7 +34,8 @@ function toggleMenu(e: MouseEvent) {
   isOpen.value = !isOpen.value
 }
 
-function handleNavClick() {
+function handleNavClick(id: string) {
+  activeSection.value = id
   isOpen.value = false
 }
 
@@ -48,31 +49,32 @@ function handleResize() {
   if (window.innerWidth > 768) isOpen.value = false
 }
 
-let observer: IntersectionObserver | null = null
+function updateActiveSection() {
+  const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4
+  if (atBottom) {
+    activeSection.value = 'contato'
+    return
+  }
+  const line = window.innerHeight * 0.3
+  let current = 'sobre'
+  document.querySelectorAll('section[id]').forEach((section) => {
+    if (section.getBoundingClientRect().top <= line) current = SECTION_TO_NAV[section.id] ?? current
+  })
+  activeSection.value = current
+}
 
 onMounted(() => {
   document.addEventListener('click', handleClickOutside)
   window.addEventListener('resize', handleResize)
+  window.addEventListener('scroll', updateActiveSection, { passive: true })
 
-  const sections = document.querySelectorAll('section[id]')
-  observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const navId = SECTION_TO_NAV[entry.target.id]
-          if (navId) activeSection.value = navId
-        }
-      })
-    },
-    { threshold: 0.35 },
-  )
-  sections.forEach((section) => observer?.observe(section))
+  updateActiveSection()
 })
 
 onUnmounted(() => {
   document.removeEventListener('click', handleClickOutside)
   window.removeEventListener('resize', handleResize)
-  observer?.disconnect()
+  window.removeEventListener('scroll', updateActiveSection)
 })
 </script>
 
@@ -80,9 +82,14 @@ onUnmounted(() => {
   <header
     class="fixed top-0 left-0 z-[1000] flex w-full items-center justify-between overflow-hidden border-b border-surface-border bg-surface px-[clamp(1rem,5vw,2rem)] py-4 text-text backdrop-blur-glass transition-colors duration-normal hover:border-primary/50 max-md:flex-wrap max-md:px-6 max-md:py-4"
   >
-    <div class="relative z-10 shrink-0 font-display text-lg font-bold tracking-wide text-text">
+    <a
+      href="#sobre"
+      aria-label="José Segura, voltar ao topo"
+      class="relative z-10 shrink-0 font-display text-lg font-bold tracking-wide text-text no-underline hover:text-text"
+      @click="handleNavClick('sobre')"
+    >
       &lt;/&gt; José Segura<span class="text-secondary">.</span>
-    </div>
+    </a>
 
     <button
       type="button"
@@ -106,6 +113,7 @@ onUnmounted(() => {
     </button>
 
     <nav
+      aria-label="Seções do portfólio"
       class="relative z-10 flex gap-6 max-md:mt-3 max-md:w-full max-md:flex-col max-md:gap-0 max-md:border-t max-md:border-surface-border max-md:pt-1 max-md:pb-2"
       :class="isOpen ? 'max-md:flex' : 'max-md:hidden'"
     >
@@ -114,8 +122,9 @@ onUnmounted(() => {
         :key="id"
         :href="href"
         class="relative text-sm font-semibold text-text-muted no-underline transition-colors duration-normal after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-normal after:content-[''] hover:text-primary hover:after:scale-x-100 focus:underline focus:outline-none max-md:border-b max-md:border-surface-border max-md:px-1 max-md:py-3 max-md:text-base max-md:after:hidden max-md:last:border-b-0"
+        :aria-current="activeSection === id ? 'true' : undefined"
         :class="activeSection === id ? 'text-primary after:scale-x-100' : ''"
-        @click="handleNavClick"
+        @click="handleNavClick(id)"
       >
         {{ label }}
       </a>

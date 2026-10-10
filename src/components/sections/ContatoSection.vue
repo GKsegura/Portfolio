@@ -22,9 +22,9 @@ const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}
     class="w-full max-w-[1200px] p-8 text-left [scroll-margin-top:clamp(4rem,10vh,5rem)]"
     :class="[REVEAL_TRANSITION, isVisible ? REVEAL_VISIBLE : REVEAL_HIDDEN]"
   >
-    <h1 class="text-4xl font-bold text-text">
+    <h2 class="mb-3">
       Entre em contato
-    </h1>
+    </h2>
     <p class="text-lg text-text-muted max-w-[560px] mb-8">
       Se você tem uma ideia ou precisa de ajuda com um projeto, entre em contato comigo! Estou sempre aberto a novas
       oportunidades e desafios.

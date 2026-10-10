@@ -47,7 +47,9 @@ const terminalLines: TerminalLine[] = [
   >
     <div class="relative z-10 flex flex-col items-center gap-10 md:flex-row md:items-start">
       <div class="w-full min-w-0 flex-1 text-center md:text-left">
-        <h1>Olá, eu sou o <span class="font-bold text-primary">{{ data.intro.nome }}</span></h1>
+        <h1 class="mb-4">
+          {{ data.intro.nome }}
+        </h1>
 
         <p
           v-if="data.intro.subtitulo"
@@ -56,18 +58,18 @@ const terminalLines: TerminalLine[] = [
           {{ data.intro.subtitulo }}
         </p>
 
-        <ul class="my-0 mb-6 flex flex-col gap-2.5 border-y border-surface-border py-4 text-left">
+        <ul class="my-0 mb-6 grid grid-cols-[auto_1fr] gap-x-5 gap-y-2.5 border-y border-surface-border py-4 text-left">
           <li
             v-for="item in fichaTecnica"
             :key="item.label"
-            class="flex flex-wrap items-baseline gap-2.5 font-mono text-sm"
+            class="col-span-2 grid grid-cols-subgrid items-baseline font-mono text-sm"
           >
             <span
-              class="min-w-[5.5rem] shrink-0 font-semibold tracking-wider text-primary uppercase after:text-secondary after:content-[':']"
+              class="font-semibold tracking-wider text-primary uppercase after:text-secondary after:content-[':']"
             >
               {{ item.label }}
             </span>
-            <span class="text-text-muted">{{ item.valor }}</span>
+            <span class="min-w-0 text-text-muted">{{ item.valor }}</span>
           </li>
         </ul>
 
@@ -98,17 +100,7 @@ const terminalLines: TerminalLine[] = [
         </div>
       </div>
 
-      <div class="flex w-full max-w-[320px] flex-none flex-col gap-6">
-        <div
-          class="relative z-0 aspect-[4/5] w-full overflow-hidden rounded-small border border-surface-border transition-transform duration-normal hover:-translate-y-1"
-        >
-          <img
-            src="https://github.com/GKsegura.png"
-            alt="Foto de perfil do José Segura"
-            class="relative z-0 h-full w-full object-cover"
-          >
-        </div>
-
+      <div class="flex w-full max-w-[360px] flex-none flex-col gap-6 md:mt-4">
         <div
           class="w-full overflow-hidden rounded-small border border-surface-border bg-black/45 shadow-small"
           aria-hidden="true"

@@ -10,13 +10,13 @@
             },
             {
                 "label": "Foco",
-                "valor": "Desenvolvimento Full Stack nos produtos NxCoop e NxZap - Java, Spring Boot, Vue 3 e Node.js"
+                "valor": "Desenvolvimento Full Stack em produtos SaaS - Java, Spring Boot, Vue 3 e Node.js"
             }
         ],
         "paragrafos": [
             {
                 "id": 1,
-                "texto": "No time de produto da Nexum Tecnologia, contribuo em dois produtos SaaS: o NxCoop (CRM de gestão de clientes e funil comercial) e o NxZap (atendimento multicanal via WhatsApp, chat e SMS). Transito entre back-end em Java e Spring Boot, front-end em Vue 3 e TypeScript, e também Node.js no NxZap - com Docker e Azure DevOps organizando o fluxo de CI/CD. Confira mais no meu <a href=\"https://github.com/GKsegura\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>."
+                "texto": "No time de produto da Nexum Tecnologia, contribuo em produtos SaaS voltados a relacionamento com clientes e atendimento. Transito entre back-end em Java e Spring Boot, front-end em Vue 3 e TypeScript, e também Node.js - com Docker e Azure DevOps no fluxo de entrega. Confira mais no meu <a href=\"https://github.com/GKsegura\" target=\"_blank\" rel=\"noopener noreferrer\">GitHub</a>."
             },
             {
                 "id": 2,

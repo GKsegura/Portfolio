@@ -67,10 +67,10 @@
     "featured": true,
     "priority": 1,
     "githubPrivate": true,
-    "shortDescription": "API REST em Spring Boot para apontamento de horas e gestão de tarefas, com um robô que lança as horas automaticamente. Uso diário no meu trabalho.",
-    "description": "CRONOS API é o backend do CRONOS, sistema de apontamento de horas e gestão de tarefas, clientes e backlog que uso todos os dias no trabalho como Analista de Suporte.\n\nO projeto nasceu como um CLI em Java para estudar a linguagem, passou por uma API artesanal e hoje é uma aplicação Spring Boot completa, com MySQL e migrations Flyway, autenticação JWT com MFA (TOTP), trilha de auditoria, exportação para Excel e documentação OpenAPI.\n\nA API também dispara um robô (Node.js + Playwright) que faz o apontamento das horas de forma automática, e todo o ambiente roda em Docker, com métricas no Prometheus e painéis no Grafana. O código é coberto por testes automatizados (JUnit e Testcontainers) e o versionamento segue Conventional Commits com semantic-release.",
+    "shortDescription": "API REST em Spring Boot para gestão de tarefas, clientes e controle de horas. Projeto pessoal de estudo de Java.",
+    "description": "CRONOS API é o backend do CRONOS, projeto pessoal de gestão de tarefas, clientes, backlog e controle de horas.\n\nO projeto nasceu como um CLI em Java para estudar a linguagem, passou por uma API artesanal e hoje é uma aplicação Spring Boot completa, com MySQL e migrations Flyway, autenticação JWT, exportação para Excel e documentação OpenAPI.\n\nTodo o ambiente roda em Docker, com métricas no Prometheus e painéis no Grafana. O código é coberto por testes automatizados (JUnit e Testcontainers) e o versionamento segue Conventional Commits com semantic-release.",
     "link": "https://github.com/GKsegura/CRONOS-API",
-    "image": "/assets/cronos-api.png",
+    "image": "/assets/default-project.svg",
     "languages": [
       "Java",
       "Spring Boot",
@@ -82,7 +82,7 @@
     "period": {
       "start": 2025
     },
-    "status": "Em uso ativo"
+    "status": "Em evolução"
   },
   {
     "id": 5,
@@ -90,10 +90,10 @@
     "featured": true,
     "priority": 2,
     "githubPrivate": true,
-    "shortDescription": "Interface web do CRONOS: dashboard, tarefas, backlog, clientes e relatórios, com 22 paletas de cor em modo claro e escuro.",
-    "description": "CRONOS APP é a interface web do sistema CRONOS, desenvolvida em Vue 3 com TypeScript para consumir a CRONOS API.\n\nTem dashboard com gráficos, controle de dias e tarefas, backlog, clientes, incidentes, relatórios, tela de acompanhamento do robô de apontamento e área administrativa (usuários, perfis e auditoria). As preferências do usuário ficam salvas no servidor e há 22 paletas de cor, cada uma em modo claro e escuro.\n\nO estado é organizado em composables (sem Pinia ou Vuex), o build é feito com Vite, o estilo com Tailwind CSS, e a aplicação é servida via nginx em Docker. É usada ativamente como ferramenta de apoio às minhas atividades profissionais.",
+    "shortDescription": "Interface web do CRONOS: dashboard, tarefas, backlog e relatórios, com 22 paletas de cor em modo claro e escuro.",
+    "description": "CRONOS APP é a interface web do sistema CRONOS, desenvolvida em Vue 3 com TypeScript para consumir a CRONOS API.\n\nTem dashboard com gráficos, controle de dias e tarefas, backlog, clientes, relatórios e área administrativa. As preferências do usuário ficam salvas no servidor e há 22 paletas de cor, cada uma em modo claro e escuro.\n\nO estado é organizado em composables (sem Pinia ou Vuex), o build é feito com Vite, o estilo com Tailwind CSS, e a aplicação é servida via nginx em Docker.",
     "link": "https://github.com/GKsegura/CRONOS-APP",
-    "image": "/assets/cronos-app.png",
+    "image": "/assets/default-project.svg",
     "languages": [
       "Vue 3",
       "TypeScript",
@@ -104,7 +104,7 @@
     "period": {
       "start": 2026
     },
-    "status": "Em uso ativo"
+    "status": "Em evolução"
   },
   {
     "id": 7,
@@ -112,7 +112,7 @@
     "featured": true,
     "priority": 3,
     "shortDescription": "Cliente git visual para workspaces: todos os repositórios do projeto lado a lado, com merge visual, rebase e terminal integrado. App desktop e CLI.",
-    "description": "Hydra é um cliente git visual pensado para quem trabalha com vários repositórios ao mesmo tempo. Ele lê os arquivos .code-workspace do VS Code e mostra o grafo de cada repositório lado a lado, no estilo do GitKraken, com as operações do dia a dia do GitHub Desktop.\n\nTem commit com stage parcial por trecho ou linha, branches, stash, tags, fetch/pull/push, merge com resolvedor visual de conflitos, rebase interativo, simulador de cenários (merge, cherry-pick e rebase sem alterar nada), operações de branch entre repositórios, clonar e publicar no GitHub e terminal integrado.\n\nFunciona como app desktop para Windows (Electron, com atualização automática) ou como CLI que abre a interface no navegador. O projeto nasceu da minha própria dor de manter os quatro repositórios do CRONOS em sincronia.",
+    "description": "Hydra é um cliente git visual pensado para quem trabalha com vários repositórios ao mesmo tempo. Ele lê os arquivos .code-workspace do VS Code e mostra o grafo de cada repositório lado a lado, no estilo do GitKraken, com as operações do dia a dia do GitHub Desktop.\n\nTem commit com stage parcial por trecho ou linha, branches, stash, tags, fetch/pull/push, merge com resolvedor visual de conflitos, rebase interativo, simulador de cenários (merge, cherry-pick e rebase sem alterar nada), operações de branch entre repositórios, clonar e publicar no GitHub e terminal integrado.\n\nFunciona como app desktop para Windows (Electron, com atualização automática) ou como CLI que abre a interface no navegador. O projeto nasceu da minha própria dor de manter vários repositórios em sincronia.",
     "link": "https://github.com/GKsegura/hydra",
     "image": "/assets/hydra.png",
     "languages": [
@@ -125,7 +125,7 @@
     "period": {
       "start": 2026
     },
-    "status": "Em uso ativo"
+    "status": "Em evolução"
   },
   {
     "id": 8,
@@ -133,9 +133,9 @@
     "githubPrivate": true,
     "priority": 4,
     "shortDescription": "Painel de finanças pessoais com tendência entre meses, acompanhamento de dívidas e bot de WhatsApp para lançar entradas e saídas.",
-    "description": "Janus é o par do CRONOS (na mitologia, Janus é o deus das duas faces): um painel de finanças pessoais com visão de tendência entre meses e acompanhamento de dívidas por meio de snapshots ao longo do tempo.\n\nO backend é em Java com Spring Boot e MySQL, o front-end em Vue 3 com Chart.js e Tailwind CSS, e um bot de WhatsApp em Node.js permite lançar entradas e saídas pelo celular, com listas e botões interativos. Tudo roda em Docker.\n\nÉ um projeto pessoal, construído em passos pequenos, que reaproveita as práticas de infraestrutura e organização que desenvolvi no CRONOS.",
+    "description": "Janus é o par do CRONOS (na mitologia, Janus é o deus das duas faces): um painel de finanças pessoais com visão de tendência entre meses e acompanhamento de dívidas por meio de snapshots ao longo do tempo.\n\nO backend é em Java com Spring Boot e MySQL, o front-end em Vue 3 com Chart.js e Tailwind CSS, e um bot de WhatsApp em Node.js permite lançar entradas e saídas pelo celular, com listas e botões interativos. Tudo roda em Docker.\n\nÉ um projeto pessoal, construído em passos pequenos, que reaproveita as práticas de infraestrutura e organização do CRONOS.",
     "link": "https://github.com/GKsegura/janus",
-    "image": "/assets/janus.png",
+    "image": "/assets/default-project.svg",
     "languages": [
       "Java",
       "Spring Boot",

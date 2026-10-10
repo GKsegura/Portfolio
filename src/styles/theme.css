@@ -1,25 +1,25 @@
 @theme {
-  --color-bg: #020203;
+  --color-bg: #0b0b0d;
   --color-primary: #a970ff;
   --color-primary-hover: #c49fff;
   --color-secondary: #56cfcf;
   --color-accent: rgba(255, 255, 255, 0.06);
 
-  --color-text: #f0f0ff;
-  --color-text-muted: #b0aecd;
+  --color-text: #ecebe6;
+  --color-text-muted: #9d9ba8;
   --color-text-inverted: #0e0e17;
 
-  --color-surface: rgba(255, 255, 255, 0.07);
+  --color-surface: rgba(255, 255, 255, 0.03);
   --color-surface-hover: rgba(169, 112, 255, 0.07);
-  --color-surface-border: rgba(255, 255, 255, 0.12);
+  --color-surface-border: rgba(255, 255, 255, 0.1);
 
-  --blur-glass: 16px;
+  --blur-glass: 0px;
 
-  --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
-  --shadow-small: 0 4px 16px rgba(0, 0, 0, 0.25);
+  --shadow: none;
+  --shadow-small: none;
 
-  --radius: 16px;
-  --radius-small: 8px;
+  --radius: 4px;
+  --radius-small: 2px;
 
   --duration-fast: 0.2s;
   --duration-normal: 0.3s;
@@ -61,6 +61,6 @@
 
 /* usados só no gradiente radial fixo do body - não valem virar token reutilizável */
 :root {
-  --gradient-1: rgba(169, 112, 255, 0.09);
-  --gradient-2: rgba(86, 207, 207, 0.05);
+  --gradient-1: transparent;
+  --gradient-2: transparent;
 }

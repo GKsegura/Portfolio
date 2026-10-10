@@ -7,7 +7,7 @@
         },
         {
             "id": 2,
-            "texto": "Entrei no CTI - Unesp Bauru pensando nisso, mas programação me pegou de jeito: fiquei de recuperação nos dois primeiros bimestres, sem entender nada. Fiz a recuperação semestral, estudei os fundamentos do zero - e tirei 10 no terceiro bimestre. No segundo ano, entreguei um projeto com nota máxima em tudo. No começo do terceiro, era um dos sete líderes técnicos da turma."
+            "texto": "Entrei no CTI - Unesp Bauru pensando nisso, mas foi a programação que me pegou de jeito. Estudei os fundamentos do zero, evoluí rápido e, no começo do terceiro ano, era um dos sete líderes técnicos da turma."
         },
         {
             "id": 3,
@@ -15,7 +15,7 @@
         },
         {
             "id": 4,
-            "texto": "Depois de formado, entrei como estagiário na Nexum Tecnologia. No meio do caminho, um período pessoal difícil me tirou do jogo por um tempo. Mas foi justamente nesse intervalo que algo mudou: retomei os estudos por conta própria, sem prazo, sem cobrança - só porque queria."
+            "texto": "Depois de formado, entrei como estagiário na Nexum Tecnologia e passei a estudar por conta própria, sem prazo e sem cobrança - só porque queria."
         },
         {
             "id": 5,
@@ -23,11 +23,11 @@
         },
         {
             "id": 6,
-            "texto": "Quando voltei à Nexum, voltei diferente. O CRONOS nasceu daí: uma forma de estudar Java resolvendo um problema real do meu dia a dia como Analista de Suporte. Hoje é um sistema completo, em uso ativo no trabalho."
+            "texto": "O CRONOS nasceu daí: um projeto pessoal para estudar Java resolvendo um problema real de organização de tarefas e tempo. Hoje é um sistema completo, com API, interface web e infraestrutura em Docker."
         },
         {
             "id": 7,
-            "texto": "Enquanto o CRONOS ganhava forma, topei o processo seletivo interno pro time de produto NxCoop: provas técnicas, entrevistas, a chance de mostrar na prática o que vinha estudando sozinho. Passei - e em setembro de 2026 assumi a vaga de Desenvolvedor Full Stack (Júnior), hoje trabalhando com Java, Spring Boot e Vue 3 no dia a dia."
+            "texto": "Enquanto o CRONOS ganhava forma, fui para o time de produto: em setembro de 2026 assumi a vaga de Desenvolvedor Full Stack (Júnior), hoje trabalhando com Java, Spring Boot e Vue 3 no dia a dia."
         }
     ]
 }
