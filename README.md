@@ -33,3 +33,7 @@ Se quiser trocar uma ideia, colaborar ou oferecer um freela:
 ---
 
 > Feito com tecnologia e café por José Segura – sempre evoluindo, sempre codando.
+
+## 📊 Linguagens
+
+![Linguagens](https://raw.githubusercontent.com/GKsegura/GKsegura/main/cards/Portfolio.svg)

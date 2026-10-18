@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import sobreData from '@data/sobre.json'
 import type { SobreData } from '@/types/sobre'
+import LinguagensStats from '@components/sections/LinguagensStats.vue'
 import {
   REVEAL_HIDDEN,
   REVEAL_TRANSITION,
@@ -182,5 +183,7 @@ const terminalLines: TerminalLine[] = [
         <span class="mt-1.5 text-center text-xs text-text-muted">{{ tech.nome }}</span>
       </li>
     </ul>
+
+    <LinguagensStats />
   </section>
 </template>
