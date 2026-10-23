@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "QInvest",
-    "priority": 5,
+    "priority": 6,
     "shortDescription": "Plataforma de educação financeira desenvolvida como TCC no CTI - Unesp Bauru. Atuei como líder técnico e desenvolvedor Full Stack.",
     "description": "QInvest é uma aplicação web Full Stack desenvolvida como Trabalho de Conclusão de Curso (TCC) do Técnico em Informática no CTI - Colégio Técnico Industrial da Unesp Bauru (2023).\n\nO projeto tem como objetivo auxiliar no controle e planejamento de investimentos financeiros, oferecendo uma interface moderna e funcional.\n\nAtuei como líder técnico do grupo, sendo responsável pelas principais decisões arquiteturais, organização do time e integração das tecnologias. Além disso, participei ativamente como desenvolvedor Full Stack, construindo tanto o backend (Laravel) quanto o frontend (Vite).",
     "link": "https://github.com/GKsegura/qinvest-web",
@@ -24,7 +24,7 @@
   {
     "id": 2,
     "title": "Portfólio",
-    "priority": 8,
+    "priority": 9,
     "shortDescription": "Este portfólio que você está navegando agora. Construído com Vue 3, TypeScript e Tailwind CSS - em constante evolução.",
     "description": "Este repositório serve como portfólio principal de projetos desenvolvidos por mim.\n\nAqui você encontra aplicações web completas, APIs RESTful e experimentações que demonstram minha evolução como desenvolvedor.\n\nMeus projetos são focados em boas práticas de código, clareza arquitetural e, sempre que possível, uma pitada de criatividade.",
     "link": "https://github.com/GKsegura/repositorio-gksegura",
@@ -43,7 +43,7 @@
   {
     "id": 3,
     "title": "EcoTube",
-    "priority": 6,
+    "priority": 7,
     "shortDescription": "E-commerce de canudos de vidro sustentáveis com catálogo, carrinho e simulação de checkout. Foco em usabilidade e consumo consciente.",
     "description": "EcoTube é um e-commerce de canudos de vidro sustentáveis, criado com o objetivo de promover o consumo consciente através da tecnologia.\n\nA plataforma permite a navegação por produtos, exibição de detalhes, adição ao carrinho e simula a jornada de compra de forma intuitiva.\n\nO projeto foi desenvolvido com foco na usabilidade, componentização e um visual limpo e funcional, alinhando propósito ecológico e boa experiência do usuário.",
     "link": "https://github.com/GKsegura/EcoTube",
@@ -131,7 +131,7 @@
     "id": 8,
     "title": "Janus",
     "githubPrivate": true,
-    "priority": 4,
+    "priority": 5,
     "shortDescription": "Painel de finanças pessoais com tendência entre meses, acompanhamento de dívidas e bot de WhatsApp para lançar entradas e saídas.",
     "description": "Janus é o par do CRONOS (na mitologia, Janus é o deus das duas faces): um painel de finanças pessoais com visão de tendência entre meses e acompanhamento de dívidas por meio de snapshots ao longo do tempo.\n\nO backend é em Java com Spring Boot e MySQL, o front-end em Vue 3 com Chart.js e Tailwind CSS, e um bot de WhatsApp em Node.js permite lançar entradas e saídas pelo celular, com listas e botões interativos. Tudo roda em Docker.\n\nÉ um projeto pessoal, construído em passos pequenos, que reaproveita as práticas de infraestrutura e organização do CRONOS.",
     "link": "https://github.com/GKsegura/janus",
@@ -152,7 +152,7 @@
   {
     "id": 6,
     "title": "Horta Inteligente",
-    "priority": 7,
+    "priority": 8,
     "shortDescription": "Sistema de irrigação automatizado utilizando Arduino, sensor de umidade do solo, display LCD e acionamento automático de bomba d'água.",
     "description": "Projeto de automação desenvolvido com Arduino para monitorar a umidade do solo e controlar automaticamente a irrigação. O sistema integra sensores, display LCD, relé e bomba d'água para reduzir a intervenção manual.\n\nO projeto demonstra integração entre hardware e software, lógica de programação, leitura de sensores e controle de dispositivos eletrônicos.",
     "link": "https://github.com/GKsegura/horta-inteligente",
@@ -168,5 +168,28 @@
       "end": 2023
     },
     "status": "Concluído"
+  },
+  {
+    "id": 9,
+    "title": "J.A.R.V.I.S.",
+    "featured": true,
+    "priority": 4,
+    "shortDescription": "Assistente pessoal estilo Homem de Ferro que roda no navegador, 100% local: voz com wake word, HUD em canvas, gestos com a mão, reconhecimento facial e o Claude como cérebro. Feito com IA, com foco em tecnologia e produtividade.",
+    "description": "Sempre achei o Homem de Ferro o herói mais legal, e não pela armadura: pelo que o Tony Stark faz com a tecnologia. Ele constrói ferramentas que ampliam o que uma pessoa consegue fazer, e o J.A.R.V.I.S. é o símbolo disso. Este projeto é a minha tentativa de trazer essa ideia para o dia a dia.\n\nEle roda no Chrome em modo app e fica no meu computador. No centro da tela há um núcleo de voz desenhado em canvas, que reage ao volume da minha voz e à fala dele. Ele só obedece frases que começam com \"Jarvis\" e mostra painéis com dados reais: CPU, RAM, rede, clima, lembretes, Spotify, notícias e finanças, esta última integrada ao Janus. A webcam entra com MediaPipe e face-api. Os gestos da mão controlam a interface e o Windows (pinça, zoom, palma que abre um menu circular, volume e troca de janelas), e o rosto verificado do dono libera os recursos mais sensíveis. O cérebro é o Claude, usado pelo Claude Code que já tenho instalado, sem chave de API, com memória e contexto real do momento.\n\nTecnicamente, é TypeScript com Vite e Canvas 2D, sem framework de interface, com mais de 13 mil linhas. O backend é o próprio servidor do Vite: cada arquivo de server/ é um plugin. O servidor só aceita pedidos locais e nunca executa comando livre, e apps e atalhos vêm só de listas fixas. Tem testes com Vitest, CI no GitHub Actions e releases automáticas com semantic-release. Também gerei um grafo de conhecimento do código com o graphify (cerca de 1.000 nós em 100 arquivos), e o centro dele é o fluxo da fala até o comando.\n\nO projeto foi feito com IA, em parceria com o Claude Code, com foco em tecnologia e produtividade. Eu falo e a máquina resolve o resto.",
+    "link": "https://github.com/GKsegura/jarvis",
+    "image": "/assets/jarvis.png",
+    "languages": [
+      "TypeScript",
+      "Vite",
+      "Canvas 2D",
+      "MediaPipe",
+      "Node.js",
+      "Claude Code"
+    ],
+    "stack": "Full Stack",
+    "period": {
+      "start": 2026
+    },
+    "status": "Em evolução"
   }
 ]
